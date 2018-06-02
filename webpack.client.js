@@ -12,6 +12,12 @@ module.exports = {
 	module: {
 		rules: [{ test: /\.js$/, loader: 'babel-loader', exclude: /node_modules/ }],
 	},
+	devServer: {
+		port: 8080,
+		compress: true,
+		historyApiFallback: true,
+		contentBase: path.join(__dirname, 'build/client'),
+	},
 	plugins: [
 		new HtmlWebpackPlugin({
 			template: './client/index.html',
