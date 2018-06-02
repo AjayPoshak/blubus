@@ -9,7 +9,7 @@ import HomePage from './views/HomePage';
 
 const App = () => (
 	<Switch>
-		<Route exact path="/home" component={HomePage} />
+		<Route exact path="/" component={HomePage} />
 	</Switch>
 );
 
