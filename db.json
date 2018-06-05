@@ -1,0 +1,168 @@
+{
+	"listing":{
+	   "result":{
+		  "journeyDetails":{
+			 "from":"Mumbai",
+			 "to":"Goa",
+			 "depDate":"01062018",
+			 "arrDate":"02062018"
+		  },
+		  "busTypes":[
+			 "AC Sleeper",
+			 "Non-AC Sleeper",
+			 "AC Seater",
+			 "Non-AC Seater"
+		  ],
+		  "companyName":[
+			 "Paulo Travels",
+			 "VRL Travels"
+		  ],
+		  "services":[
+			 {
+				"companyName":"Paulo Travels",
+				"busType":"AC Sleeper",
+				"dep":"1730",
+				"arr":"0600",
+				"travelTime":"960",
+				"totalSeats":"22",
+				"bookedSeats":"3",
+				"rating":"4.7",
+				"ticketPrice":"70",
+				"currency":"USD"
+			 },
+			 {
+				"companyName":"VRL Travels",
+				"busType":"AC Seater",
+				"dep":"1830",
+				"arr":"0700",
+				"travelTime":"960",
+				"totalSeats":"55",
+				"bookedSeats":"35",
+				"rating":"4.7",
+				"ticketPrice":"70",
+				"currency":"USD"
+			 },
+			 {
+				"companyName":"Paulo Travels",
+				"busType":"AC Sleeper",
+				"dep":"1730",
+				"arr":"0600",
+				"travelTime":"960",
+				"totalSeats":"22",
+				"bookedSeats":"3",
+				"rating":"4.7",
+				"ticketPrice":"70",
+				"currency":"USD"
+			 },
+			 {
+				"companyName":"VRL Travels",
+				"busType":"AC Seater",
+				"dep":"1830",
+				"arr":"0700",
+				"travelTime":"960",
+				"totalSeats":"55",
+				"bookedSeats":"35",
+				"rating":"4.7",
+				"ticketPrice":"70",
+				"currency":"USD"
+			 },
+			 {
+				"companyName":"Paulo Travels",
+				"busType":"AC Sleeper",
+				"dep":"1730",
+				"arr":"0600",
+				"travelTime":"960",
+				"totalSeats":"22",
+				"bookedSeats":"3",
+				"rating":"4.7",
+				"ticketPrice":"70",
+				"currency":"USD"
+			 },
+			 {
+				"companyName":"VRL Travels",
+				"busType":"AC Seater",
+				"dep":"1830",
+				"arr":"0700",
+				"travelTime":"960",
+				"totalSeats":"55",
+				"bookedSeats":"35",
+				"rating":"4.7",
+				"ticketPrice":"70",
+				"currency":"USD"
+			 },
+			 {
+				"companyName":"Paulo Travels",
+				"busType":"AC Sleeper",
+				"dep":"1730",
+				"arr":"0600",
+				"travelTime":"960",
+				"totalSeats":"22",
+				"bookedSeats":"3",
+				"rating":"4.7",
+				"ticketPrice":"70",
+				"currency":"USD"
+			 },
+			 {
+				"companyName":"VRL Travels",
+				"busType":"AC Seater",
+				"dep":"1830",
+				"arr":"0700",
+				"travelTime":"960",
+				"totalSeats":"55",
+				"bookedSeats":"35",
+				"rating":"4.7",
+				"ticketPrice":"70",
+				"currency":"USD"
+			 },
+			 {
+				"companyName":"Paulo Travels",
+				"busType":"AC Sleeper",
+				"dep":"1730",
+				"arr":"0600",
+				"travelTime":"960",
+				"totalSeats":"22",
+				"bookedSeats":"3",
+				"rating":"4.7",
+				"ticketPrice":"70",
+				"currency":"USD"
+			 },
+			 {
+				"companyName":"VRL Travels",
+				"busType":"AC Seater",
+				"dep":"1830",
+				"arr":"0700",
+				"travelTime":"960",
+				"totalSeats":"55",
+				"bookedSeats":"35",
+				"rating":"4.7",
+				"ticketPrice":"70",
+				"currency":"USD"
+			 },
+			 {
+				"companyName":"Paulo Travels",
+				"busType":"AC Sleeper",
+				"dep":"1730",
+				"arr":"0600",
+				"travelTime":"960",
+				"totalSeats":"22",
+				"bookedSeats":"3",
+				"rating":"4.7",
+				"ticketPrice":"70",
+				"currency":"USD"
+			 },
+			 {
+				"companyName":"VRL Travels",
+				"busType":"AC Seater",
+				"dep":"1830",
+				"arr":"0700",
+				"travelTime":"960",
+				"totalSeats":"55",
+				"bookedSeats":"35",
+				"rating":"4.7",
+				"ticketPrice":"70",
+				"currency":"USD"
+			 }
+		  ]
+	   }
+	}
+ }
