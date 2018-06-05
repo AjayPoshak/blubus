@@ -1,11 +1,17 @@
 import React, { Component } from 'react';
-import Header from '../../components/Header/Header';
-import TextInput from '../../components/TextInput';
-import PageWrapper from './style';
+import { withRouter } from 'react-router-dom';
 
+import PageWrapper from './style';
 import Button from '../../components/Button';
+import TextInput from '../../components/TextInput';
+import Header from '../../components/Header/Header';
+
 
 class HomePage extends Component {
+	constructor() {
+		super();
+		this.handleSearchClick = this.handleSearchClick.bind(this);
+	}
 	handleFrom(event) {
 		console.log(event);
 	}
@@ -14,8 +20,8 @@ class HomePage extends Component {
 		console.log(value);
 	}
 
-	handleClick(event) {
-		console.log(event);
+	handleSearchClick(event) {
+		this.props.history.push('/listing');
 	}
 
 	render() {
@@ -26,7 +32,7 @@ class HomePage extends Component {
 					<PageWrapper>
 						<TextInput type="text" placeholder="Choose your location" handleChange={this.handleFrom} icon="http://res.cloudinary.com/ddbxa4afa/image/upload/v1527944418/blubus/location.svg" />
 						<TextInput type="text" placeholder="Choose your destination" handleChange={this.handleTo} icon="http://res.cloudinary.com/ddbxa4afa/image/upload/v1527944416/blubus/destination.svg" />
-						<Button appearance="primary" handleClick={this.handleClick}>Search Buses</Button>
+						<Button appearance="primary" handleClick={this.handleSearchClick}>Search Buses</Button>
 					</PageWrapper>
 				</section>
 			</section>
@@ -34,4 +40,4 @@ class HomePage extends Component {
 	}
 }
 
-export default HomePage;
+export default withRouter(HomePage);
