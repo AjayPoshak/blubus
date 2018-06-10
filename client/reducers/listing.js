@@ -2,7 +2,7 @@ const initialState = {
 	isLoading: false,
 	isError: false,
 	items: {},
-	error: '',
+	error: ''
 };
 
 export default function listing(state = initialState, action) {
@@ -10,13 +10,15 @@ export default function listing(state = initialState, action) {
 	case 'REQUEST_LISTING':
 		return { ...state, isLoading: true };
 
-
 	case 'RECEIVE_LISTING':
 		return { ...state, isLoading: false, items: action.data };
 
 	case 'FAILED_LISTING':
 		return {
-			...state, isLoading: false, isError: true, error: action.err,
+			...state,
+			isLoading: false,
+			isError: true,
+			error: action.err
 		};
 
 	default:
