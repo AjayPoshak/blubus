@@ -31,7 +31,7 @@ TextInput.defaultProps = {
 };
 
 TextInput.propTypes = {
-	type: PropTypes.oneOf(['text', 'password', 'email', 'number']).isRequired,
+	type: PropTypes.oneOf(['text', 'password', 'email', 'number', 'tel']).isRequired,
 	handleChange: PropTypes.func.isRequired,
 	icon: PropTypes.string
 };
