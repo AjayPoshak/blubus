@@ -1,4 +1,272 @@
 {
+	"search": {
+		"result": [
+			{
+				"city": "Kigali",
+				"country": "Rawanda",
+				"cityCode": "KIG",
+				"countryCode": "RW"
+			},
+			{
+				"city": "Butare",
+				"country": "Rawanda",
+				"cityCode": "BUT",
+				"countryCode": "RW"
+			},
+			{
+				"city": "Gisenyi",
+				"country": "Rawanda",
+				"cityCode": "BUT",
+				"countryCode": "RW"
+			},
+			{
+				"city": "Byumba",
+				"country": "Rawanda",
+				"cityCode": "BYU",
+				"countryCode": "RW"
+			},
+			{
+				"city": "Cyangugu",
+				"country": "Rawanda",
+				"cityCode": "CYA",
+				"countryCode": "RW"
+			},
+			{
+				"city": "Kibuye",
+				"country": "Rawanda",
+				"cityCode": "BUT",
+				"countryCode": "RW"
+			},
+			{
+				"city": "Rwamagana",
+				"country": "Rawanda",
+				"cityCode": "BUT",
+				"countryCode": "RW"
+			},
+			{
+				"city": "Kibungo",
+				"country": "Rawanda",
+				"cityCode": "BUT",
+				"countryCode": "RW"
+			},
+			{
+				"city": "Kibeho",
+				"country": "Rawanda",
+				"cityCode": "BUT",
+				"countryCode": "RW"
+			},
+			{
+				"city": "Gitarama",
+				"country": "Rawanda",
+				"cityCode": "BUT",
+				"countryCode": "RW"
+			},
+			{
+				"city": "Ruhengeri",
+				"country": "Rawanda",
+				"cityCode": "BUT",
+				"countryCode": "RW"
+			},
+			{
+				"city": "Mumbai",
+				"country": "Rawanda",
+				"cityCode": "BUT",
+				"countryCode": "RW"
+			},
+			{
+				"city": "Delhi",
+				"country": "Rawanda",
+				"cityCode": "BUT",
+				"countryCode": "RW"
+			},
+			{
+				"city": "Bangalore",
+				"country": "Rawanda",
+				"cityCode": "BUT",
+				"countryCode": "RW"
+			},
+			{
+				"city": "Karnataka",
+				"country": "Rawanda",
+				"cityCode": "BUT",
+				"countryCode": "RW"
+			},
+			{
+				"city": "Hyderabad",
+				"country": "Rawanda",
+				"cityCode": "BUT",
+				"countryCode": "RW"
+			},
+			{
+				"city": "Telangana",
+				"country": "Rawanda",
+				"cityCode": "BUT",
+				"countryCode": "RW"
+			},
+			{
+				"city": "Ahmedabad",
+				"country": "Rawanda",
+				"cityCode": "BUT",
+				"countryCode": "RW"
+			},
+			{
+				"city": "Chennai",
+				"country": "Rawanda",
+				"cityCode": "BUT",
+				"countryCode": "RW"
+			},
+			{
+				"city": "Kolkata",
+				"country": "Rawanda",
+				"cityCode": "BUT",
+				"countryCode": "RW"
+			},
+			{
+				"city": "Surat",
+				"country": "Rawanda",
+				"cityCode": "BUT",
+				"countryCode": "RW"
+			},
+			{
+				"city": "Pune",
+				"country": "Rawanda",
+				"cityCode": "BUT",
+				"countryCode": "RW"
+			},
+			{
+				"city": "Jaipur",
+				"country": "Rawanda",
+				"cityCode": "BUT",
+				"countryCode": "RW"
+			},
+			{
+				"city": "Lucknow",
+				"country": "Rawanda",
+				"cityCode": "BUT",
+				"countryCode": "RW"
+			},
+			{
+				"city": "Kanpur",
+				"country": "Rawanda",
+				"cityCode": "BUT",
+				"countryCode": "RW"
+			},
+			{
+				"city": "Nagpur",
+				"country": "Rawanda",
+				"cityCode": "BUT",
+				"countryCode": "RW"
+			},
+			{
+				"city": "Indore",
+				"country": "Rawanda",
+				"cityCode": "BUT",
+				"countryCode": "RW"
+			},
+			{
+				"city": "Visakhapatnam",
+				"country": "Rawanda",
+				"cityCode": "BUT",
+				"countryCode": "RW"
+			},
+			{
+				"city": "Bhopal",
+				"country": "Rawanda",
+				"cityCode": "BUT",
+				"countryCode": "RW"
+			},
+			{
+				"city": "Vadodara",
+				"country": "Rawanda",
+				"cityCode": "BUT",
+				"countryCode": "RW"
+			},
+			{
+				"city": "Ghaziabad",
+				"country": "Rawanda",
+				"cityCode": "BUT",
+				"countryCode": "RW"
+			},
+			{
+				"city": "Coimbatore",
+				"country": "Rawanda",
+				"cityCode": "BUT",
+				"countryCode": "RW"
+			},
+			{
+				"city": "Madurai",
+				"country": "Rawanda",
+				"cityCode": "BUT",
+				"countryCode": "RW"
+			},
+			{
+				"city": "Nashik",
+				"country": "Rawanda",
+				"cityCode": "BUT",
+				"countryCode": "RW"
+			},
+			{
+				"city": "Faridabad",
+				"country": "Rawanda",
+				"cityCode": "BUT",
+				"countryCode": "RW"
+			},
+			{
+				"city": "Meerut",
+				"country": "Rawanda",
+				"cityCode": "BUT",
+				"countryCode": "RW"
+			},
+			{
+				"city": "Rajkot",
+				"country": "Rawanda",
+				"cityCode": "BUT",
+				"countryCode": "RW"
+			},
+			{
+				"city": "Kalyan",
+				"country": "Rawanda",
+				"cityCode": "BUT",
+				"countryCode": "RW"
+			},
+			{
+				"city": "Dombivali",
+				"country": "Rawanda",
+				"cityCode": "BUT",
+				"countryCode": "RW"
+			},
+			{
+				"city": "Thane",
+				"country": "Rawanda",
+				"cityCode": "BUT",
+				"countryCode": "RW"
+			},
+			{
+				"city": "Patna",
+				"country": "Rawanda",
+				"cityCode": "BUT",
+				"countryCode": "RW"
+			},
+			{
+				"city": "Ludhiana",
+				"country": "Rawanda",
+				"cityCode": "BUT",
+				"countryCode": "RW"
+			},
+			{
+				"city": "Agra",
+				"country": "Rawanda",
+				"cityCode": "BUT",
+				"countryCode": "RW"
+			},
+			{
+				"city": "Jaipur",
+				"country": "Rawanda",
+				"cityCode": "BUT",
+				"countryCode": "RW"
+			}
+		]
+	},
 	"listing":{
 	   "result":{
 		  "journeyDetails":{
@@ -164,5 +432,140 @@
 			 }
 		  ]
 	   }
+	},
+	"seatlayout": {
+		"result": [
+			[
+				{
+					"isAvailable": true,
+					"isGangWay": false
+				},
+				{
+					"isAvailable": true,
+					"isGangWay": false
+				},
+				{
+					"isAvailable": true,
+					"isGangWay": false
+				},
+				{
+					"isAvailable": false,
+					"isGangWay": true
+				},
+				{
+					"isAvailable": false,
+					"isGangWay": false
+				},
+				{
+					"isAvailable": true,
+					"isGangWay": false
+				}
+			],
+			[
+				{
+					"isAvailable": true,
+					"isGangWay": false
+				},
+				{
+					"isAvailable": true,
+					"isGangWay": false
+				},
+				{
+					"isAvailable": true,
+					"isGangWay": false
+				},
+				{
+					"isAvailable": false,
+					"isGangWay": true
+				},
+				{
+					"isAvailable": false,
+					"isGangWay": false
+				},
+				{
+					"isAvailable": true,
+					"isGangWay": false
+				}
+			],
+			[
+				{
+					"isAvailable": true,
+					"isGangWay": false
+				},
+				{
+					"isAvailable": true,
+					"isGangWay": false
+				},
+				{
+					"isAvailable": true,
+					"isGangWay": false
+				},
+				{
+					"isAvailable": false,
+					"isGangWay": true
+				},
+				{
+					"isAvailable": true,
+					"isGangWay": false
+				},
+				{
+					"isAvailable": true,
+					"isGangWay": false
+				}
+			],
+			[
+				{
+					"isAvailable": false,
+					"isGangWay": false
+				},
+				{
+					"isAvailable": true,
+					"isGangWay": false
+				},
+				{
+					"isAvailable": true,
+					"isGangWay": false
+				},
+				{
+					"isAvailable": false,
+					"isGangWay": true
+				},
+				{
+					"isAvailable": true,
+					"isGangWay": false
+				},
+				{
+					"isAvailable": true,
+					"isGangWay": false
+				}
+			],
+			[
+				{
+					"isAvailable": true,
+					"isGangWay": false
+				},
+				{
+					"isAvailable": true,
+					"isGangWay": false
+				},
+				{
+					"isAvailable": true,
+					"isGangWay": false
+				},
+				{
+					"isAvailable": false,
+					"isGangWay": true
+				},
+				{
+					"isAvailable": true,
+					"isGangWay": false
+				},
+				{
+					"isAvailable": false,
+					"isGangWay": false
+				}
+			]
+		]
+		
 	}
  }
