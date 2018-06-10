@@ -1,6 +1,7 @@
-import React, { Component } from 'react';
-import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
+import { connect } from 'react-redux';
+import React, { Component } from 'react';
+import { withRouter } from 'react-router-dom';
 
 import uid from '../../utils/uid';
 import ListingCard from './ListingCard';
@@ -9,8 +10,17 @@ import { fetchListingDataIfNeeded } from './actionCreators';
 import { ListViewWrapper, JourneyDetailWrapper, FromToArrow } from './style';
 
 class Listing extends Component {
+	constructor() {
+		super();
+		this.onCardClick = this.onCardClick.bind(this);
+	}
+
 	componentDidMount() {
 		this.props.dispatch(fetchListingDataIfNeeded());
+	}
+
+	onCardClick() {
+		this.props.history.push('/seatlayout');
 	}
 
 	render() {
@@ -44,6 +54,7 @@ class Listing extends Component {
 									currency={currency}
 									travelTime={travelTime}
 									companyName={companyName}
+									clickHandler={this.onCardClick}
 								/>
 							);
 						})}
@@ -87,4 +98,4 @@ ListingCard.propTypes = {
 
 const mapStateToProps = state => ({ listing: state.listing });
 
-export default connect(mapStateToProps)(Listing);
+export default connect(mapStateToProps)(withRouter(Listing));

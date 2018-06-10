@@ -3,7 +3,7 @@ import { renderToString } from 'react-dom/server';
 import { StaticRouter } from 'react-router-dom';
 import { Provider } from 'react-redux';
 import { createStore } from 'redux';
-import rootReducer from '../../client/rootReducer';
+import rootReducer from '../../client/reducers';
 import App from '../../client/routes';
 import renderFullPage from '../helpers';
 
@@ -13,10 +13,10 @@ const HydrateState = async (ctx, next) => {
 		context = {};
 
 	const html = renderToString(<Provider store={store}>
-			<StaticRouter location={ctx.request.url} context={context}>
-				<App />
-			</StaticRouter>
-		</Provider>,);
+		<StaticRouter location={ctx.request.url} context={context}>
+			<App />
+		</StaticRouter>
+	</Provider>);
 	if (context.url) {
 		// @TODO : Handle redirection properly
 		ctx.response.status(301, { Location: context.url });
