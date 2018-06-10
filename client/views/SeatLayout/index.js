@@ -1,6 +1,7 @@
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import React, { Component } from 'react';
+import { withRouter } from 'react-router-dom';
 
 import Legend from './Legend';
 import { LegendWrapper } from './style';
@@ -11,11 +12,12 @@ class SeatLayout extends Component {
 	constructor() {
 		super();
 		this.canvasRef = null;
-		this.setCanvasRef = (element) => {
+		this.setCanvasRef = element => {
 			this.canvasRef = element;
 		};
 
 		this.updateCanvas = this.updateCanvas.bind(this);
+		this.handleCanvasClick = this.handleCanvasClick.bind(this);
 		this.state = {
 			bookedSeatImg: 'http://res.cloudinary.com/ddbxa4afa/image/upload/v1528543654/blubus/armchair_3.svg',
 			availableSeatImg: 'http://res.cloudinary.com/ddbxa4afa/image/upload/v1528528337/blubus/armchair.svg'
@@ -44,9 +46,9 @@ class SeatLayout extends Component {
 		let offsetX = 30,
 			offsetY = 20;
 		items &&
-			items.map((item) => {
+			items.map(item => {
 				offsetX = 0;
-				item.map((row) => {
+				item.map(row => {
 					row.isAvailable && row.isGangWay === false && this.createImage(ctx, offsetX, offsetY, false);
 					row.isAvailable === false &&
 						row.isGangWay === false &&
@@ -60,7 +62,7 @@ class SeatLayout extends Component {
 	}
 
 	handleCanvasClick(event) {
-		console.log("I'm clicked", event, event.pageX);
+		this.props.history.push('/summary');
 	}
 
 	render() {
@@ -100,4 +102,4 @@ SeatLayout.propTypes = {
 	dispatch: PropTypes.func.isRequired
 };
 
-export default connect(mapStateToProps)(SeatLayout);
+export default connect(mapStateToProps)(withRouter(SeatLayout));

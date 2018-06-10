@@ -9,8 +9,9 @@ class OrderSummary extends Component {
 	constructor() {
 		super();
 		this.state = {
-			showOrderSummary: true
+			showOrderSummary: false
 		};
+		this.handleOrderSummary = this.handleOrderSummary.bind(this);
 	}
 
 	handleOrderSummary(shouldShow) {
