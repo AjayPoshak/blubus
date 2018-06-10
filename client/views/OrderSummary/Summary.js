@@ -12,7 +12,7 @@ class Summary extends Component {
 	}
 
 	payNow() {
-		this.props.history.push('/listing');
+		this.props.history.push('/confirmation');
 	}
 
 	render() {
