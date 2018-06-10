@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { CardWrapper, CardHeader, CompanyName, Currency, Timings, BusIcon, Timer, TimerWrapper } from './style';
 
 const ListingCard = props => (
-	<CardWrapper>
+	<CardWrapper onClick={props.clickHandler}>
 		<CardHeader>
 			<CompanyName>{props.companyName}</CompanyName>
 			<Currency>
@@ -34,13 +34,15 @@ ListingCard.defaultProps = {
 	travelTime: '',
 	arrivalTime: '',
 	companyName: '',
-	departureTime: ''
+	departureTime: '',
+	clickHandler: () => {}
 };
 
 ListingCard.propTypes = {
 	price: PropTypes.string,
 	currency: PropTypes.string,
 	travelTime: PropTypes.string,
+	clickHandler: PropTypes.func,
 	arrivalTime: PropTypes.string,
 	companyName: PropTypes.string,
 	departureTime: PropTypes.string
