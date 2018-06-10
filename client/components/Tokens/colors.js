@@ -11,19 +11,26 @@ const colors = {
 		background: white,
 		text: primaryColor,
 		border: primaryColor,
-		placeholder: primaryColor,
+		placeholder: primaryColor
 	},
 	button: {
 		primary: {
 			text: white,
-			background: secondaryColor,
+			background: secondaryColor
 		},
 		default: {
 			text: black,
-			background: defaultColor,
-		},
+			background: defaultColor
+		}
 	},
+	seats: {
+		booked: {
+			background: defaultColor
+		},
+		available: {
+			background: secondaryColor
+		}
+	}
 };
 
 export default colors;
-

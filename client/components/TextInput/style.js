@@ -4,7 +4,6 @@ import { colors, fonts, misc } from '../Tokens';
 export const Input = styled.input`
 	outline: none;
 	padding-left: 45px;
-	margin-bottom: 70px;
 	width: ${misc.input.width};
 	color: ${colors.input.text};
 	height: ${misc.input.height};
@@ -19,11 +18,14 @@ export const Input = styled.input`
 	}
 `;
 
-export const InputWrapper = styled.label`
-	position: relative;
+export const InputWrapper = styled.span`
 	display: flex;
+	position: relative;
 	svg {
 		fill: #000;
+	}
+	&:last-of-type {
+		margin-top: 70px;
 	}
 `;
 

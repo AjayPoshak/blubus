@@ -8,7 +8,10 @@
 		"react/jsx-indent": [4, "tab"],
 		"class-methods-use-this": "off",
 		"react/jsx-filename-extension": "off",
-		"react/jsx-indent-props": [4, "tab"]
+		"react/jsx-indent-props": [4, "tab"],
+		"object-curly-newline":"off",
+		"comma-dangle": ["error", "never"],
+		"no-unused-expressions": ["error", { "allowShortCircuit": true, "allowTernary": true }]
 	},
 	"globals": {
 		"node": true,

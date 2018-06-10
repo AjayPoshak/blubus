@@ -1,6 +1,6 @@
 import thunk from 'redux-thunk';
 import { createStore, applyMiddleware, compose } from 'redux';
-import rootReducer from './rootReducer';
+import rootReducer from '../client/reducers';
 
 // this enables the chrome devtools for redux only in development
 const composeEnhancers =

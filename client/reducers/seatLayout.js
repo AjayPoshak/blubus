@@ -1,26 +1,23 @@
 const initialState = {
 	isLoading: false,
 	isError: false,
-	items: {},
+	items: [],
 	error: ''
 };
 
-export default function listing(state = initialState, action) {
+export default function seatLayout(state = initialState, action) {
 	switch (action.type) {
-	case 'REQUEST_LISTING':
+	case 'REQUEST_SEATLAYOUT_DATA':
 		return { ...state, isLoading: true };
-
-	case 'RECEIVE_LISTING':
+	case 'RECEIVE_SEATLAYOUT_DATA':
 		return { ...state, isLoading: false, items: action.data };
-
-	case 'FAILED_LISTING':
+	case 'FAILED_SEATLAYOUT_DATA':
 		return {
 			...state,
 			isLoading: false,
 			isError: true,
 			error: action.err
 		};
-
 	default:
 		return state;
 	}

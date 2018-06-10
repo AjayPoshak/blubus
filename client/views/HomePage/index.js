@@ -1,26 +1,33 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
 import { withRouter } from 'react-router-dom';
 
-import PageWrapper from './style';
+import Search from './Search';
+import { PageWrapper } from './style';
 import Button from '../../components/Button';
-import TextInput from '../../components/TextInput';
+import { fetchSearch } from './actionCreators';
 import Header from '../../components/Header/Header';
-
 
 class HomePage extends Component {
 	constructor() {
 		super();
+		this.handleFrom = this.handleFrom.bind(this);
 		this.handleSearchClick = this.handleSearchClick.bind(this);
 	}
-	handleFrom(event) {
-		console.log(event);
+
+	componentDidMount() {
+		this.props.dispatch(fetchSearch());
 	}
 
-	handleTo(event, value) {
-		console.log(value);
+	handleFrom(value) {
+		console.log('From', value);
 	}
 
-	handleSearchClick(event) {
+	handleTo(value) {
+		console.log('To', value);
+	}
+
+	handleSearchClick() {
 		this.props.history.push('/listing');
 	}
 
@@ -30,9 +37,27 @@ class HomePage extends Component {
 				<section>
 					<Header />
 					<PageWrapper>
-						<TextInput type="text" placeholder="Choose your location" handleChange={this.handleFrom} icon="http://res.cloudinary.com/ddbxa4afa/image/upload/v1527944418/blubus/location.svg" />
-						<TextInput type="text" placeholder="Choose your destination" handleChange={this.handleTo} icon="http://res.cloudinary.com/ddbxa4afa/image/upload/v1527944416/blubus/destination.svg" />
-						<Button appearance="primary" handleClick={this.handleSearchClick}>Search Buses</Button>
+						<Search
+							type="text"
+							dispatch={this.props.dispatch}
+							handleSearchResultSelection={this.handleFrom}
+							placeholder="Choose your location"
+							result={this.props.homePage.searchResult}
+							icon="http://res.cloudinary.com/ddbxa4afa/image/upload/v1527944418/blubus/location.svg"
+						/>
+						<Search
+							type="text"
+							dispatch={this.props.dispatch}
+							handleSearchResultSelection={this.handleTo}
+							placeholder="Choose your destination"
+							result={this.props.homePage.searchResult}
+							icon="http://res.cloudinary.com/ddbxa4afa/image/upload/v1527944416/blubus/destination.svg"
+						/>
+						<div style={{ marginTop: '70px' }}>
+							<Button appearance="primary" handleClick={this.handleSearchClick}>
+								Search Buses
+							</Button>
+						</div>
 					</PageWrapper>
 				</section>
 			</section>
@@ -40,4 +65,6 @@ class HomePage extends Component {
 	}
 }
 
-export default withRouter(HomePage);
+const mapStateToProps = state => ({ homePage: state.homePage });
+
+export default connect(mapStateToProps)(withRouter(HomePage));
