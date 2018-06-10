@@ -5,11 +5,11 @@
   "main": "index.js",
   "scripts": {
     "dev:web": "webpack-dev-server --mode development --config ./webpack.client.js",
-	"build:web": "webpack --mode production --config ./webpack.client.js",
-	"build:ssr": "webpack --mode production --config ./webpack.server.js",
+    "build:web": "webpack --mode production --config ./webpack.client.js",
+    "build:ssr": "webpack --mode production --config ./webpack.server.js",
     "dev:api": "",
-	"dev:ssr": "webpack --mode development --config ./webpack.server.js --watch & yarn run start:server",
-	"start:server": "nodemon build/server/main.bundle.js"
+    "dev:ssr": "webpack --mode development --config ./webpack.server.js --watch & yarn run start:server",
+    "start:server": "nodemon build/server/main.bundle.js"
   },
   "lint-staged": {
     "*.js": [
@@ -38,23 +38,23 @@
     "redux-thunk": "^2.2.0",
     "styled-components": "^3.3.0",
     "webpack": "^4.9.1",
-    "webpack-node-externals": "^1.7.2"
-  },
-  "devDependencies": {
-	"babel-polyfill": "^6.26.0",
-    "babel-cli": "^6.26.0",
-    "babel-core": "^6.26.3",
+    "webpack-node-externals": "^1.7.2",
+    "webpack-cli": "^2.1.4",
     "babel-loader": "^7.1.4",
     "babel-preset-env": "^1.7.0",
     "babel-preset-react": "^6.24.1",
     "babel-preset-stage-2": "^6.24.1",
+    "babel-polyfill": "^6.26.0"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.3",
     "eslint-config-airbnb": "^16.1.0",
     "eslint-plugin-import": "^2.12.0",
     "eslint-plugin-jsx-a11y": "^6.0.3",
     "eslint-plugin-react": "^7.8.2",
     "husky": "^0.14.3",
     "lint-staged": "^7.1.2",
-    "webpack-cli": "^2.1.4",
     "webpack-dev-server": "^3.1.4"
   }
 }
