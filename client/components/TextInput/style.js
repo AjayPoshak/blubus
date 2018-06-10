@@ -36,3 +36,19 @@ export const Icon = styled.img`
 	width: ${misc.input.icon.width};
 	height: ${misc.input.icon.height};
 `;
+
+export const ErrorWrapper = styled.span`
+	top: 59px;
+	left: 0;
+	width: 100%;
+	height: 45px;
+	display: flex;
+	position: absolute;
+	align-items: center;
+	background: #fef3f1;
+	justify-content: space-around;
+`;
+
+export const ErrorMsg = styled.p`
+	color: #cf2a2a;
+`;
