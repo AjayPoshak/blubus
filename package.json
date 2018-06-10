@@ -8,8 +8,8 @@
     "build:web": "webpack --mode production --config ./webpack.client.js",
     "build:ssr": "webpack --mode production --config ./webpack.server.js",
     "dev:api": "",
-    "dev:ssr": "webpack --mode development --config ./webpack.server.js --watch & yarn run start:server",
-	"start:server": "nodemon build/server/main.bundle.js",
+    "dev:ssr": "webpack --mode development --config ./webpack.server.js --watch & yarn run start",
+	"start": "nodemon build/server/main.bundle.js",
 	"clean": "rm -rf build"
   },
   "lint-staged": {
