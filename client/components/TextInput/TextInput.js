@@ -1,7 +1,7 @@
 import React, { Component, Fragment } from 'react';
 import PropTypes from 'prop-types';
 
-import { InputWrapper, Input, Icon } from './style';
+import { InputWrapper, Input, Icon, ErrorWrapper, ErrorMsg } from './style';
 
 class TextInput extends Component {
 	constructor() {
@@ -14,12 +14,17 @@ class TextInput extends Component {
 	}
 
 	render() {
-		const { type, icon } = this.props;
+		const { type, icon, showError, error } = this.props;
 		return (
 			<Fragment>
 				<InputWrapper>
 					<Input type={type} onChange={this.handleChange} {...this.props} value={this.props.value} />
 					{icon && <Icon src={icon} alt={icon} />}
+					{showError && (
+						<ErrorWrapper>
+							<ErrorMsg>{error}</ErrorMsg>
+						</ErrorWrapper>
+					)}
 				</InputWrapper>
 			</Fragment>
 		);
@@ -27,12 +32,16 @@ class TextInput extends Component {
 }
 
 TextInput.defaultProps = {
-	icon: ''
+	icon: '',
+	showError: false,
+	error: ''
 };
 
 TextInput.propTypes = {
-	type: PropTypes.oneOf(['text', 'password']).isRequired,
+	icon: PropTypes.string,
+	error: PropTypes.string,
+	showError: PropTypes.bool,
 	handleChange: PropTypes.func.isRequired,
-	icon: PropTypes.string
+	type: PropTypes.oneOf(['text', 'password', 'email', 'number', 'tel']).isRequired
 };
 export default TextInput;
