@@ -16,7 +16,7 @@ ReactDOM.render(
 			<App />
 		</BrowserRouter>
 	</Provider>,
-	document.getElementById('root'),
+	document.getElementById('root')
 );
 
 // eslint-disable-next-line
@@ -29,5 +29,8 @@ injectGlobal`
 	body {
 		font-family: 'Roboto', sans-serif;
 	}
-`;
 
+	ul {
+		list-style-type: none;
+	}
+`;
