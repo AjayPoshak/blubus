@@ -1,23 +1,49 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { CardWrapper, CardHeader, CompanyName, Currency, Timings, BusIcon, Timer, TimerWrapper } from './style';
 
 const ListingCard = props => (
 	<CardWrapper>
 		<CardHeader>
-			<CompanyName>Paulo Travels</CompanyName>
-			<Currency>70 USD</Currency>
+			<CompanyName>{props.companyName}</CompanyName>
+			<Currency>
+				{props.price} {props.currency}
+			</Currency>
 		</CardHeader>
 		<Timings>
-			<p>1730</p>
-			<BusIcon alt="traveling-bus" src="http://res.cloudinary.com/ddbxa4afa/image/upload/v1528048630/blubus/traveling-bus.svg" />
-			<p>0600</p>
+			<p>{props.arrivalTime}</p>
+			<BusIcon
+				alt="traveling-bus"
+				src="http://res.cloudinary.com/ddbxa4afa/image/upload/v1528048630/blubus/traveling-bus.svg"
+			/>
+			<p>{props.departureTime}</p>
 			<TimerWrapper>
-				<Timer alt="timer" src="http://res.cloudinary.com/ddbxa4afa/image/upload/v1528048884/blubus/timer.svg" />
-				<p>18 hrs</p>
+				<Timer
+					alt="timer"
+					src="http://res.cloudinary.com/ddbxa4afa/image/upload/v1528048884/blubus/timer.svg"
+				/>
+				<p>{props.travelTime} hours</p>
 			</TimerWrapper>
 		</Timings>
 	</CardWrapper>
 );
 
-export default ListingCard;
+ListingCard.defaultProps = {
+	price: '',
+	currency: '',
+	travelTime: '',
+	arrivalTime: '',
+	companyName: '',
+	departureTime: ''
+};
 
+ListingCard.propTypes = {
+	price: PropTypes.string,
+	currency: PropTypes.string,
+	travelTime: PropTypes.string,
+	arrivalTime: PropTypes.string,
+	companyName: PropTypes.string,
+	departureTime: PropTypes.string
+};
+
+export default ListingCard;
