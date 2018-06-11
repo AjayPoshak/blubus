@@ -20,7 +20,7 @@ class OrderSummary extends Component {
 
 	render() {
 		return (
-			<section>
+			<section style={{ position: 'relative', paddingBottom: '30px' }}>
 				<Header />
 				<Wrapper>
 					{this.state.showOrderSummary ? (
