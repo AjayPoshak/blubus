@@ -1,4 +1,4 @@
-const renderFullPage = (html, preloadedState) => `<!DOCTYPE html>
+const renderFullPage = (html, preloadedState, styles) => `<!DOCTYPE html>
 	<html>
 	
 	<head>
@@ -31,6 +31,7 @@ const renderFullPage = (html, preloadedState) => `<!DOCTYPE html>
 		<meta name="msapplication-TileColor" content="#ffffff">
 		<meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
 		<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+		${styles}
 	</head>
 	
 	<body>
