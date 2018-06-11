@@ -9,8 +9,8 @@
     "build:ssr": "webpack --mode production --config ./webpack.server.js",
     "dev:api": "",
     "dev:ssr": "webpack --mode development --config ./webpack.server.js --watch & yarn run start",
-	"start": "nodemon build/server/main.bundle.js",
-	"clean": "rm -rf build"
+    "start": "node build/server/main.bundle.js",
+    "clean": "rm -rf build"
   },
   "lint-staged": {
     "*.js": [
