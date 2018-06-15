@@ -41,5 +41,6 @@ const renderFullPage = (html, preloadedState, styles) => `<!DOCTYPE html>
 		window.__PRELOADED_STATE__ = ${JSON.stringify(preloadedState).replace(/</g, '\\u003c')}
 	</script>
 	<script src='/build/client/main.bundle.js'></script>
+	<script src='/build/client/vendors.bundle.js'></script>
 	</html>`;
 export default renderFullPage;
