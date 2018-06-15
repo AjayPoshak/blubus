@@ -4,7 +4,7 @@ const path = require('path'),
 	HtmlWebpackPlugin = require('html-webpack-plugin'),
 	UglifyJsPlugin = require('uglifyjs-webpack-plugin');
 
-const isProd = process.env.NODE_ENV ==== 'production';
+const isProd = process.env.NODE_ENV === 'production';
 console.log('process.env.NODE_ENV ', process.env.NODE_ENV);
 /**
  * Plugins for dev environment
