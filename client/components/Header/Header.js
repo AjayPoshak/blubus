@@ -1,14 +1,17 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
+
 import Logo from '../logo';
 import HeaderWrapper from './style';
 
 const Header = () => (
 	<HeaderWrapper>
-		<header>
-			<Logo />
-		</header>
+		<Link style={{ textDecoration: 'none' }} to="/">
+			<header>
+				<Logo />
+			</header>
+		</Link>
 	</HeaderWrapper>
 );
 
 export default Header;
-

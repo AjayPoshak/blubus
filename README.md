@@ -1,0 +1,1 @@
+[![pipeline status](https://gitlab.com/blubus-pwa-canary/blubus/badges/master/pipeline.svg)](https://gitlab.com/blubus-pwa-canary/blubus/commits/master)

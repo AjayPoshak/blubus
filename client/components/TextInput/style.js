@@ -11,8 +11,8 @@ export const Input = styled.input`
 	font-size: ${fonts.input.fontSize};
 	font-weight: ${fonts.input.fontWeight};
 	background-color: ${colors.input.background};
-	border-bottom: 1px solid ${colors.input.border}
-	
+	border-bottom: 1px solid ${colors.input.border};
+
 	&::placeholder {
 		color: ${colors.input.placeholder};
 	}
