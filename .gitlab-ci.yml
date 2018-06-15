@@ -14,7 +14,7 @@ deploy_production:
   only:
     - master
   script:
-    - export NODE_ENV=$NODE_ENV
+    - export NODE_ENV=production
     - npm i && npm run build:web && npm run build:ssr
     - echo $DEPLOY_KEY_FILE_PRODUCTION > /tmp/$CI_PIPELINE_ID.json
     - gcloud auth activate-service-account --key-file /tmp/$CI_PIPELINE_ID.json
