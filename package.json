@@ -19,6 +19,9 @@
       "git add"
     ]
   },
+  "engines": {
+	"node": "10.x"
+  },
   "author": "Ajay Poshak",
   "license": "ISC",
   "dependencies": {
