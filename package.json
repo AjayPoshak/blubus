@@ -20,7 +20,7 @@
     ]
   },
   "engines": {
-	"node": "10.x"
+	"node": "9.x"
   },
   "author": "Ajay Poshak",
   "license": "ISC",

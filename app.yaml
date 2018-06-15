@@ -18,4 +18,6 @@ manual_scaling:
   instances: 1
 skip_files:
 - package-lock.json
+env_variables:
+  NODE_ENV: "production"
 # [END runtime]
