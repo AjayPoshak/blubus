@@ -20,12 +20,12 @@
     ]
   },
   "engines": {
-	"node": "9.x"
+    "node": "9.x"
   },
   "author": "Ajay Poshak",
   "license": "ISC",
   "dependencies": {
-    "assets-webpack-plugin": "^3.6.0",
+    "assets-webpack-plugin": "^3.8.0",
     "axios": "^0.18.0",
     "babel-loader": "^7.1.4",
     "babel-plugin-styled-components": "^1.5.1",
