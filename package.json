@@ -10,7 +10,8 @@
     "dev:api": "",
     "dev:ssr": "webpack --mode development --config ./webpack.server.js --watch & yarn run start",
     "start": "node build/server/main.bundle.js",
-    "clean": "rm -rf build"
+	"clean": "rm -rf build",
+	"build:stats": "webpack --env production --json > stats.json"
   },
   "lint-staged": {
     "*.js": [
