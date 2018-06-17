@@ -6,7 +6,7 @@ import { renderToString } from 'react-dom/server';
 import { ServerStyleSheet, StyleSheetManager } from 'styled-components';
 
 import App from '../../client/routes';
-import renderFullPage from '../helpers';
+import renderFullPage from '../renderer';
 import rootReducer from '../../client/reducers';
 
 const HydrateState = async (ctx, next) => {
@@ -30,7 +30,7 @@ const HydrateState = async (ctx, next) => {
 		ctx.response.status(301, { Location: context.url });
 	} else {
 		// we are good, send response
-		ctx.body = renderFullPage(html, preloadedState, styleTags);
+		ctx.body = renderFullPage(html, preloadedState, styleTags, global.bundles);
 	}
 	await next();
 };

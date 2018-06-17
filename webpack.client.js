@@ -5,7 +5,6 @@ const path = require('path'),
 	UglifyJsPlugin = require('uglifyjs-webpack-plugin');
 
 const isProd = process.env.NODE_ENV === 'production';
-console.log('process.env.NODE_ENV ', process.env.NODE_ENV);
 /**
  * Plugins for dev environment
  */
@@ -42,10 +41,11 @@ const prodPlugins = [
 const pluginList = isProd ? [...devPlugins, ...prodPlugins] : devPlugins;
 
 module.exports = {
+	// May add cheap-module-source-map to devtool to generate source maps to prod builds
 	devtool: isProd ? '' : 'inline-source-map',
 	entry: './client/index.js',
 	output: {
-		filename: '[name].bundle.js',
+		filename: isProd ? '[name].[chunkhash].js' : '[name].bundle.js',
 		path: path.resolve(__dirname, 'build/client'),
 		publicPath: 'build/client'
 	},
@@ -68,6 +68,9 @@ module.exports = {
 					chunks: 'all'
 				}
 			}
+		},
+		runtimeChunk: {
+			name: 'manifest'
 		}
 	}
 };
