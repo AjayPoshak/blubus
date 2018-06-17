@@ -1,4 +1,6 @@
-const renderFullPage = (html, preloadedState, styles) => `<!DOCTYPE html>
+export const createScriptTag = script => `<script src=${script}></script>`;
+
+const renderFullPage = (html, preloadedState, styles, bundles) => `<!DOCTYPE html>
 	<html lang="en">
 	
 	<head>
@@ -42,7 +44,7 @@ const renderFullPage = (html, preloadedState, styles) => `<!DOCTYPE html>
 	<script>
 		window.__PRELOADED_STATE__ = ${JSON.stringify(preloadedState).replace(/</g, '\\u003c')}
 	</script>
-	<script src='/build/client/main.bundle.js'></script>
-	<script src='/build/client/vendors.bundle.js'></script>
+	<script src=${bundles.main.js}></script>
+	<script src=${bundles.vendors.js}></script>
 	</html>`;
 export default renderFullPage;
