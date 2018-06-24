@@ -91,7 +91,7 @@ class UserDetails extends Component {
 						handleChange={this.handleEmail}
 						error="please enter a valid email"
 						showError={this.state.showEmailError}
-						icon="http://res.cloudinary.com/ddbxa4afa/image/upload/v1528611235/blubus/email.svg"
+						icon="https://res.cloudinary.com/ddbxa4afa/image/upload/v1528611235/blubus/email.svg"
 					/>
 					<TextInput
 						type="tel"
@@ -100,7 +100,7 @@ class UserDetails extends Component {
 						placeholder="Enter your mobile"
 						error="please enter a valid mobile"
 						showError={this.state.showMobileError}
-						icon="http://res.cloudinary.com/ddbxa4afa/image/upload/v1528611234/blubus/mobile.svg"
+						icon="https://res.cloudinary.com/ddbxa4afa/image/upload/v1528611234/blubus/mobile.svg"
 					/>
 				</ContactInfo>
 				<InfoHeader>
@@ -115,7 +115,7 @@ class UserDetails extends Component {
 							handleChange={this.handleName}
 							error="please enter your name"
 							showError={this.state.showNameError}
-							icon="http://res.cloudinary.com/ddbxa4afa/image/upload/v1528623999/blubus/user.svg"
+							icon="https://res.cloudinary.com/ddbxa4afa/image/upload/v1528623999/blubus/user.svg"
 						/>
 						<TextInput
 							type="number"
@@ -124,7 +124,7 @@ class UserDetails extends Component {
 							handleChange={this.handleAge}
 							error="please enter a valid age"
 							showError={this.state.showAgeError}
-							icon="http://res.cloudinary.com/ddbxa4afa/image/upload/v1528624264/blubus/info.svg"
+							icon="https://res.cloudinary.com/ddbxa4afa/image/upload/v1528624264/blubus/info.svg"
 						/>
 					</article>
 				</PassengerInfo>

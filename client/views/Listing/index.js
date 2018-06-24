@@ -34,7 +34,7 @@ class Listing extends Component {
 							<h2>{journeyDetails.from}</h2>
 							<FromToArrow
 								alt="arrow"
-								src="http://res.cloudinary.com/ddbxa4afa/image/upload/v1528049570/blubus/right-arrow.svg"
+								src="https://res.cloudinary.com/ddbxa4afa/image/upload/v1528049570/blubus/right-arrow.svg"
 							/>
 							<h2>{journeyDetails.to}</h2>
 						</JourneyDetailWrapper>

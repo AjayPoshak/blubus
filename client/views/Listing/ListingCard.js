@@ -14,13 +14,13 @@ const ListingCard = props => (
 			<p>{props.arrivalTime}</p>
 			<BusIcon
 				alt="traveling-bus"
-				src="http://res.cloudinary.com/ddbxa4afa/image/upload/v1528048630/blubus/traveling-bus.svg"
+				src="https://res.cloudinary.com/ddbxa4afa/image/upload/v1528048630/blubus/traveling-bus.svg"
 			/>
 			<p>{props.departureTime}</p>
 			<TimerWrapper>
 				<Timer
 					alt="timer"
-					src="http://res.cloudinary.com/ddbxa4afa/image/upload/v1528048884/blubus/timer.svg"
+					src="https://res.cloudinary.com/ddbxa4afa/image/upload/v1528048884/blubus/timer.svg"
 				/>
 				<p>{props.travelTime} hours</p>
 			</TimerWrapper>

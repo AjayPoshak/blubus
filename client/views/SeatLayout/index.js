@@ -19,8 +19,8 @@ class SeatLayout extends Component {
 		this.updateCanvas = this.updateCanvas.bind(this);
 		this.handleCanvasClick = this.handleCanvasClick.bind(this);
 		this.state = {
-			bookedSeatImg: 'http://res.cloudinary.com/ddbxa4afa/image/upload/v1528543654/blubus/armchair_3.svg',
-			availableSeatImg: 'http://res.cloudinary.com/ddbxa4afa/image/upload/v1528528337/blubus/armchair.svg'
+			bookedSeatImg: 'https://res.cloudinary.com/ddbxa4afa/image/upload/v1528543654/blubus/armchair_3.svg',
+			availableSeatImg: 'https://res.cloudinary.com/ddbxa4afa/image/upload/v1528528337/blubus/armchair.svg'
 		};
 	}
 	componentDidMount() {

@@ -53,7 +53,7 @@ Search.defaultProps = {
 	result: [],
 	type: 'text',
 	placeholder: '',
-	icon: 'http://res.cloudinary.com/ddbxa4afa/image/upload/v1527944418/blubus/location.svg'
+	icon: 'https://res.cloudinary.com/ddbxa4afa/image/upload/v1527944418/blubus/location.svg'
 };
 
 Search.propTypes = {

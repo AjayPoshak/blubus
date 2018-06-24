@@ -10,13 +10,16 @@ const Confirmation = () => (
 			<CheckMark>
 				<img
 					alt="confirmation"
-					src="http://res.cloudinary.com/ddbxa4afa/image/upload/v1528637133/blubus/tick.svg"
+					src="https://res.cloudinary.com/ddbxa4afa/image/upload/v1528637133/blubus/tick.svg"
 				/>
 			</CheckMark>
 			<ConfirmMsg>Your tickets have been confirmed. Enjoy your ride.</ConfirmMsg>
 			<InfoWrapper>
 				<p>Kigali</p>
-				<BusImage alt="bus" src="http://res.cloudinary.com/ddbxa4afa/image/upload/v1528636704/blubus/bus.svg" />
+				<BusImage
+					alt="bus"
+					src="https://res.cloudinary.com/ddbxa4afa/image/upload/v1528636704/blubus/bus.svg"
+				/>
 				<p>Kibuye</p>
 			</InfoWrapper>
 			<ul>

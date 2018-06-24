@@ -43,7 +43,7 @@ class HomePage extends Component {
 							handleSearchResultSelection={this.handleFrom}
 							placeholder="Choose your location"
 							result={this.props.homePage.searchResult}
-							icon="http://res.cloudinary.com/ddbxa4afa/image/upload/v1527944418/blubus/location.svg"
+							icon="https://res.cloudinary.com/ddbxa4afa/image/upload/v1527944418/blubus/location.svg"
 						/>
 						<Search
 							type="text"
@@ -51,7 +51,7 @@ class HomePage extends Component {
 							handleSearchResultSelection={this.handleTo}
 							placeholder="Choose your destination"
 							result={this.props.homePage.searchResult}
-							icon="http://res.cloudinary.com/ddbxa4afa/image/upload/v1527944416/blubus/destination.svg"
+							icon="https://res.cloudinary.com/ddbxa4afa/image/upload/v1527944416/blubus/destination.svg"
 						/>
 						<div style={{ marginTop: '70px' }}>
 							<Button appearance="primary" handleClick={this.handleSearchClick}>

@@ -23,7 +23,7 @@ class Summary extends Component {
 						<p>Kigali</p>
 						<img
 							alt="to"
-							src="http://res.cloudinary.com/ddbxa4afa/image/upload/v1528049570/blubus/right-arrow.svg"
+							src="https://res.cloudinary.com/ddbxa4afa/image/upload/v1528049570/blubus/right-arrow.svg"
 						/>
 						<p>Kibuye</p>
 					</SummaryInfo>
