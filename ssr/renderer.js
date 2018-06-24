@@ -34,13 +34,13 @@ const renderFullPage = (html, preloadedState, styles, bundles) => `<!DOCTYPE htm
 		<link rel="icon" type="image/png" sizes="192x192"  href="/android-icon-192x192.png">
 		<meta name="msapplication-TileColor" content="#ffffff">
 		<meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
-		<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
 		${styles}
 	</head>
 	
 	<body>
 		<div id="root">${html}</div>
 	</body>
+	<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
 	<script>
 		window.__PRELOADED_STATE__ = ${JSON.stringify(preloadedState).replace(/</g, '\\u003c')}
 	</script>
