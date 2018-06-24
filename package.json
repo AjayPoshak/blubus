@@ -6,7 +6,7 @@
   "scripts": {
     "dev:web": "webpack-dev-server --mode development --config ./webpack.client.js",
     "build:web": "yarn run clean && webpack --mode production --config ./webpack.client.js",
-    "build:ssr": "yarn run clean && webpack --mode production --config ./webpack.server.js",
+    "build:ssr": "webpack --mode production --config ./webpack.server.js",
     "dev:api": "",
     "dev:ssr": "webpack --mode development --config ./webpack.server.js --watch & yarn run start",
     "start": "node build/server/main.bundle.js",
