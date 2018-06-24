@@ -47,5 +47,12 @@ const renderFullPage = (html, preloadedState, styles, bundles) => `<!DOCTYPE htm
 	<script src=${bundles.manifest.js}></script>
 	<script src=${bundles.main.js}></script>
 	<script src=${bundles.vendors.js}></script>
+	<script>
+		if('serviceWorker' in navigator) {
+			window.addEventListener('load', () => {
+				navigator.serviceWorker.register('./service-worker.js')
+			})
+		}
+	</script>
 	</html>`;
 export default renderFullPage;
