@@ -10,8 +10,8 @@
     "dev:api": "",
     "dev:ssr": "webpack --mode development --config ./webpack.server.js --watch & yarn run start",
     "start": "node build/server/main.bundle.js",
-	"clean": "rm -rf build",
-	"build:stats": "webpack --env production --json > stats.json"
+    "clean": "rm -rf build",
+    "build:stats": "webpack --env production --json > stats.json"
   },
   "lint-staged": {
     "*.js": [
@@ -42,6 +42,7 @@
     "koa-static": "^4.0.3",
     "prettier": "^1.12.1",
     "prop-types": "^15.6.1",
+    "raven": "^2.6.3",
     "react": "^16.4.0",
     "react-dom": "^16.4.0",
     "react-redux": "^5.0.7",
