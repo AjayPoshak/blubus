@@ -1,10 +1,12 @@
 const path = require('path'),
+	webpack = require('webpack'),
 	AssetsPlugin = require('assets-webpack-plugin'),
 	BrotliPlugin = require('brotli-webpack-plugin'),
 	HtmlWebpackPlugin = require('html-webpack-plugin'),
 	UglifyJsPlugin = require('uglifyjs-webpack-plugin');
 
 const isProd = process.env.NODE_ENV === 'production';
+
 /**
  * Plugins for dev environment
  */
@@ -17,6 +19,9 @@ const devPlugins = [
 		prettyPrint: true,
 		filename: 'assets.json',
 		path: path.resolve(__dirname, 'build')
+	}),
+	new webpack.DefinePlugin({
+		__ENV__: JSON.stringify(process.env.NODE_ENV || 'development')
 	})
 ];
 /**
