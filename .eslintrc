@@ -1,5 +1,9 @@
 {
-	"extends": "airbnb",
+	"extends": ["airbnb", "plugin:flowtype/recommended"],
+	"parser": "babel-eslint",
+	"plugins": [
+		"flowtype"
+	],
 	"rules": {
 		"no-tabs": "off",
 		"one-var": "off",
@@ -11,7 +15,8 @@
 		"react/jsx-indent-props": [4, "tab"],
 		"object-curly-newline":"off",
 		"comma-dangle": ["error", "never"],
-		"no-unused-expressions": ["error", { "allowShortCircuit": true, "allowTernary": true }]
+		"no-unused-expressions": ["error", { "allowShortCircuit": true, "allowTernary": true }],
+		"function-paren-newline": "off"
 	},
 	"globals": {
 		"node": true,
@@ -21,6 +26,7 @@
 	},
 	"env": {
 		"es6": true,
+		"jest": true,
 		"node": true,
 		"browser": true
 	}
