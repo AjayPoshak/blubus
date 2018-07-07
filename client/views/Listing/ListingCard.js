@@ -1,8 +1,18 @@
-import React from 'react';
-import PropTypes from 'prop-types';
+// @flow
+import * as React from 'react';
 import { CardWrapper, CardHeader, CompanyName, Currency, Timings, BusIcon, Timer, TimerWrapper } from './style';
 
-const ListingCard = props => (
+type Props = {
+	price: string,
+	currency: string,
+	travelTime: string,
+	clickHandler: () => void,
+	arrivalTime: string,
+	companyName: string,
+	departureTime: string
+};
+
+const ListingCard = (props: Props) => (
 	<CardWrapper onClick={props.clickHandler}>
 		<CardHeader>
 			<CompanyName>{props.companyName}</CompanyName>
@@ -36,16 +46,6 @@ ListingCard.defaultProps = {
 	companyName: '',
 	departureTime: '',
 	clickHandler: () => {}
-};
-
-ListingCard.propTypes = {
-	price: PropTypes.string,
-	currency: PropTypes.string,
-	travelTime: PropTypes.string,
-	clickHandler: PropTypes.func,
-	arrivalTime: PropTypes.string,
-	companyName: PropTypes.string,
-	departureTime: PropTypes.string
 };
 
 export default ListingCard;
