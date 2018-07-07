@@ -3,19 +3,21 @@ import * as type from 'babel-polyfill';
 
 import fs from 'fs';
 import Koa from 'koa';
+import Raven from 'raven';
 import serve from 'koa-static';
 import Router from 'koa-router';
 import bodyparser from 'koa-bodyparser';
 
 import routes from './routes';
 
-/**
- * Require routes
- */
-// require('./routes')(router);
+const isProd = process.env.NODE_ENV;
 
 const app = new Koa(),
 	router = new Router();
+
+if (isProd === 'PRODUCTION') {
+	Raven.config('https://5b1a4966d5934836ae9f6bc73d5370bb@sentry.io/1232248').install();
+}
 
 app.use(serve('.')); // Serving static build files
 app.use(bodyparser()); // Parsing body of every request
@@ -51,9 +53,9 @@ app.use(async (ctx, next) => {
 		await next();
 	} catch (err) {
 		console.error(`Global error handling ${err}`);
+		isProd && Raven.captureException(err);
 	}
 });
-
 routes(router);
 
 app.use(router.routes()).use(router.allowedMethods());

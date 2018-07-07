@@ -41,6 +41,8 @@ const renderFullPage = (html, preloadedState, styles, bundles) => `<!DOCTYPE htm
 		<div id="root">${html}</div>
 	</body>
 	<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+	<script src=https://cdn.ravenjs.com/3.24.0/raven.min.js
+ crossorigin=anonymous></script>
 	<script>
 		window.__PRELOADED_STATE__ = ${JSON.stringify(preloadedState).replace(/</g, '\\u003c')}
 	</script>
