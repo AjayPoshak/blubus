@@ -1,4 +1,4 @@
-import PropTypes from 'prop-types';
+// @flow
 import { connect } from 'react-redux';
 import React, { Component } from 'react';
 import { withRouter } from 'react-router-dom';
@@ -9,10 +9,41 @@ import Header from '../../components/Header/Header';
 import { fetchListingDataIfNeeded } from './actionCreators';
 import { ListViewWrapper, JourneyDetailWrapper, FromToArrow } from './style';
 
-class Listing extends Component {
+type servicesValidation = {
+	arr: string,
+	dep: string,
+	rating: string,
+	busType: string,
+	currency: string,
+	travelTime: string,
+	totalSeats: string,
+	bookedSeats: string,
+	companyName: string,
+	ticketPrice: string
+};
+
+type Props = {
+	dispatch: (?Function) => void,
+	history: any,
+	listing: {
+		items: {
+			busTypes: Array<string>,
+			companyName: Array<string>,
+			journeyDetails: {
+				to: string,
+				from: string,
+				depDate: string,
+				arrDate: string
+			},
+			services: Array<servicesValidation>
+		}
+	}
+};
+
+export class Listing extends Component<Props> {
 	constructor() {
 		super();
-		this.onCardClick = this.onCardClick.bind(this);
+		(this: any).onCardClick = this.onCardClick.bind(this);
 	}
 
 	componentDidMount() {
@@ -42,7 +73,7 @@ class Listing extends Component {
 				</section>
 				<ListViewWrapper>
 					{services &&
-						services.map((item) => {
+						services.map(item => {
 							const { companyName, busType, dep, arr, travelTime, ticketPrice, currency } = item;
 							return (
 								<ListingCard
@@ -63,38 +94,6 @@ class Listing extends Component {
 		);
 	}
 }
-
-const servicesValidation = PropTypes.shape({
-	arr: PropTypes.string,
-	dep: PropTypes.string,
-	rating: PropTypes.string,
-	busType: PropTypes.string,
-	currency: PropTypes.string,
-	travelTime: PropTypes.string,
-	totalSeats: PropTypes.string,
-	bookedSeats: PropTypes.string,
-	companyName: PropTypes.string,
-	ticketPrice: PropTypes.string
-});
-
-const journeyDetailsValidation = PropTypes.shape({
-	to: PropTypes.string,
-	from: PropTypes.string,
-	depDate: PropTypes.string,
-	arrDate: PropTypes.string
-});
-
-ListingCard.propTypes = {
-	dispatch: PropTypes.func,
-	listing: PropTypes.shape({
-		items: PropTypes.shape({
-			busTypes: PropTypes.arrayOf(PropTypes.string),
-			companyName: PropTypes.arrayOf(PropTypes.string),
-			journeyDetails: PropTypes.shape(journeyDetailsValidation),
-			services: PropTypes.arrayOf(PropTypes.shape(servicesValidation))
-		})
-	})
-};
 
 const mapStateToProps = state => ({ listing: state.listing });
 
