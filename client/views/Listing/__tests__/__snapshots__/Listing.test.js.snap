@@ -1,0 +1,155 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Schedules listing component UI snapshots 1`] = `
+<section>
+  <section
+    className="sc-jTzLTM kmjhrp"
+  >
+    <a
+      href="/"
+      onClick={[Function]}
+      style={
+        Object {
+          "textDecoration": "none",
+        }
+      }
+    >
+      <header>
+        <span
+          className="sc-gZMcBi jZgJdZ"
+        >
+          <img
+            alt="blubus logo"
+            className="sc-gqjmRU cqEElJ"
+            src="../../public/images/BluBus_192x192.png"
+          />
+          <h1
+            className="sc-VigVT beOaog"
+          >
+            BluBus
+          </h1>
+        </span>
+      </header>
+    </a>
+  </section>
+  <section>
+    <header
+      className="sc-htpNat kiiLbN"
+    >
+      <h2>
+        kibuye
+      </h2>
+      <img
+        alt="arrow"
+        className="sc-bxivhb kIfBUr"
+        src="https://res.cloudinary.com/ddbxa4afa/image/upload/v1528049570/blubus/right-arrow.svg"
+      />
+      <h2>
+        Kigali
+      </h2>
+    </header>
+  </section>
+  <article
+    className="sc-bdVaJa fRGHqF"
+  >
+    <section
+      className="sc-bwzfXH hcNNxv"
+      onClick={[Function]}
+    >
+      <header
+        className="sc-ifAKCX bWqqkl"
+      >
+        <h2
+          className="sc-EHOje hlHsbz"
+        >
+          MR Travels
+        </h2>
+        <p
+          className="sc-bZQynM gUHbKa"
+        >
+          
+           
+          
+        </p>
+      </header>
+      <article
+        className="sc-gzVnrw kyzxxf"
+      >
+        <p>
+          
+        </p>
+        <img
+          alt="traveling-bus"
+          className="sc-dnqmqq cswPpA"
+          src="https://res.cloudinary.com/ddbxa4afa/image/upload/v1528048630/blubus/traveling-bus.svg"
+        />
+        <p>
+          
+        </p>
+        <div
+          className="sc-htoDjs blXLnW"
+        >
+          <img
+            alt="timer"
+            className="sc-iwsKbI chODOK"
+            src="https://res.cloudinary.com/ddbxa4afa/image/upload/v1528048884/blubus/timer.svg"
+          />
+          <p>
+            
+             hours
+          </p>
+        </div>
+      </article>
+    </section>
+    <section
+      className="sc-bwzfXH hcNNxv"
+      onClick={[Function]}
+    >
+      <header
+        className="sc-ifAKCX bWqqkl"
+      >
+        <h2
+          className="sc-EHOje hlHsbz"
+        >
+          MRP Travels
+        </h2>
+        <p
+          className="sc-bZQynM gUHbKa"
+        >
+          
+           
+          
+        </p>
+      </header>
+      <article
+        className="sc-gzVnrw kyzxxf"
+      >
+        <p>
+          
+        </p>
+        <img
+          alt="traveling-bus"
+          className="sc-dnqmqq cswPpA"
+          src="https://res.cloudinary.com/ddbxa4afa/image/upload/v1528048630/blubus/traveling-bus.svg"
+        />
+        <p>
+          
+        </p>
+        <div
+          className="sc-htoDjs blXLnW"
+        >
+          <img
+            alt="timer"
+            className="sc-iwsKbI chODOK"
+            src="https://res.cloudinary.com/ddbxa4afa/image/upload/v1528048884/blubus/timer.svg"
+          />
+          <p>
+            
+             hours
+          </p>
+        </div>
+      </article>
+    </section>
+  </article>
+</section>
+`;
