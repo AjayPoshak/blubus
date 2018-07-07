@@ -52,7 +52,7 @@ module.exports = {
 	output: {
 		filename: isProd ? '[name].[chunkhash].js' : '[name].bundle.js',
 		path: path.resolve(__dirname, 'build/client'),
-		publicPath: 'build/client'
+		publicPath: 'build/client/'
 	},
 	module: {
 		rules: [{ test: /\.js$/, loader: 'babel-loader', exclude: /node_modules/ }]
