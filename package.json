@@ -10,8 +10,17 @@
     "dev:api": "",
     "dev:ssr": "webpack --mode development --config ./webpack.server.js --watch & yarn run start",
     "start": "node build/server/main.bundle.js",
-	"clean": "rm -rf build",
-	"build:stats": "webpack --env production --json > stats.json"
+    "clean": "rm -rf build",
+    "build:stats": "webpack --env production --json > stats.json",
+    "test": "jest --config ./jest.config.json",
+    "test:watch": "jest --config ./jest.config.json --watch",
+    "test:debug": "node --inspect-brk ./node_modules/.bin/jest --config ./jest.config.json --runInBand --watch",
+    "test:debug:win": "node --inspect-brk ./node_modules/jest/bin/jest.js --config ./jest.config.json --runInBand --watch",
+	"test:snapshot": "jest --config ./jest.config.json -u",
+	"flow start": "flow start",
+	"flow stop": "flow stop",
+	"flow status": "flow status",
+	"flow coverage": "flow coverage"
   },
   "lint-staged": {
     "*.js": [
@@ -42,6 +51,7 @@
     "koa-static": "^4.0.3",
     "prettier": "^1.12.1",
     "prop-types": "^15.6.1",
+    "raven": "^2.6.3",
     "react": "^16.4.0",
     "react-dom": "^16.4.0",
     "react-redux": "^5.0.7",
@@ -58,12 +68,21 @@
   "devDependencies": {
     "babel-cli": "^6.26.0",
     "babel-core": "^6.26.3",
+    "babel-eslint": "^8.2.5",
+    "babel-jest": "^23.2.0",
+    "enzyme": "^3.3.0",
+    "enzyme-adapter-react-16": "^1.1.1",
+    "enzyme-to-json": "^3.3.4",
     "eslint-config-airbnb": "^16.1.0",
+    "eslint-plugin-flowtype": "^2.49.3",
     "eslint-plugin-import": "^2.12.0",
     "eslint-plugin-jsx-a11y": "^6.0.3",
     "eslint-plugin-react": "^7.8.2",
+    "flow-bin": "^0.76.0",
     "husky": "^0.14.3",
+    "jest": "^23.2.0",
     "lint-staged": "^7.1.2",
+    "react-test-renderer": "^16.4.1",
     "webpack-dev-server": "^3.1.4"
   }
 }

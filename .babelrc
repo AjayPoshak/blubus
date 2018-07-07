@@ -41,6 +41,16 @@
 					"ssr": true
 				  }]
 			]
+		},
+		"test": {
+			"presets": [
+				[
+					"env",
+					{"modules": "commonjs"}
+				],
+				"react",
+				"stage-2"
+			]
 		}
 	}
 }
