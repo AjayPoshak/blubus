@@ -34,8 +34,6 @@ const renderFullPage = (html, preloadedState, styles, bundles) => `<!DOCTYPE htm
 		<link rel="icon" type="image/png" sizes="192x192"  href="/android-icon-192x192.png">
 		<meta name="msapplication-TileColor" content="#ffffff">
 		<meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
-		<!-- Third Party CSS for calendar module -->
-		<link rel="stylesheet" href="/public/rc-calendar.css">
 		${styles}
 	</head>
 	
@@ -58,5 +56,7 @@ const renderFullPage = (html, preloadedState, styles, bundles) => `<!DOCTYPE htm
 			})
 		}
 	</script>
+	<!-- Third Party CSS for calendar module -->
+	<link rel="stylesheet" href="/public/rc-calendar.css">
 	</html>`;
 export default renderFullPage;
