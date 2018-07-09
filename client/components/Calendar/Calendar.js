@@ -34,9 +34,12 @@ class CustomCalendar extends Component {
 		return (
 			<Fragment>
 				<TextInput
-					handleChange={this.handleChange}
+					type="text"
+					icon="https://res.cloudinary.com/ddbxa4afa/image/upload/v1531114873/blubus/calendar.svg"
 					onFocus={this.handleFocus}
+					handleChange={this.handleChange}
 					value={this.state.selectedDate}
+					placeholder={this.props.placeholder}
 				/>
 				{this.state.showCalendar && (
 					<Calendar {...this.props} onSelect={this.selectDate} prefixClass="react-cal-" />
