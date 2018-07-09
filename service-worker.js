@@ -8,7 +8,6 @@ const CACHE_NAME = 'js-cache';
 self.addEventListener('install', event => {
 	event.waitUntil(
 		caches.open(CACHE_NAME).then(cache => {
-			console.log('opened cache 😎');
 			// Reading assets to be cached from assets.json file
 			return fetch('build/assets.json')
 				.then(response => {
@@ -41,7 +40,6 @@ self.addEventListener('fetch', event => {
 				return response;
 			}
 
-			console.log('Not found in cache 😱', event.request);
 			const fetchRequest = event.request.clone();
 			return fetch(fetchRequest).then(response => {
 				// Checking if its not a opaque response
@@ -49,7 +47,6 @@ self.addEventListener('fetch', event => {
 					return response;
 				}
 				// Not found in cache, making network request
-				console.log('caching response from network 🤓', event.request);
 				// Clone the response stream.  Stream can be consumed once.
 				// Hence by cloning it, we send one copy back to browser
 				// and another copy to cache.
