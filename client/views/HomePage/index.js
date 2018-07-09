@@ -55,15 +55,17 @@ class HomePage extends Component<Props> {
 							result={this.props.homePage.searchResult}
 							icon="https://res.cloudinary.com/ddbxa4afa/image/upload/v1527944418/blubus/location.svg"
 						/>
-						<Search
-							type="text"
-							dispatch={this.props.dispatch}
-							handleSearchResultSelection={this.handleTo}
-							placeholder="Choose your destination"
-							result={this.props.homePage.searchResult}
-							icon="https://res.cloudinary.com/ddbxa4afa/image/upload/v1527944416/blubus/destination.svg"
-						/>
-						<Calendar showToday showTimePicker />
+						<div style={{ marginTop: '70px', marginBottom: '70px' }}>
+							<Search
+								type="text"
+								dispatch={this.props.dispatch}
+								handleSearchResultSelection={this.handleTo}
+								placeholder="Choose your destination"
+								result={this.props.homePage.searchResult}
+								icon="https://res.cloudinary.com/ddbxa4afa/image/upload/v1527944416/blubus/destination.svg"
+							/>
+						</div>
+						<Calendar showToday showTimePicker placeholder="Choose date for journey" />
 						<div style={{ marginTop: '70px' }}>
 							<Button appearance="primary" handleClick={this.handleSearchClick}>
 								Search Buses
