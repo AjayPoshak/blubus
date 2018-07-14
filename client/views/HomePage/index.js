@@ -6,9 +6,9 @@ import { withRouter } from 'react-router-dom';
 
 import Search from './Search';
 import { PageWrapper } from './style';
-import Calendar from '../../components/Calendar';
 import Button from '../../components/Button';
 import { fetchSearch } from './actionCreators';
+import Calendar from '../../components/Calendar';
 import TextInput from '../../components/TextInput';
 import Header from '../../components/Header/Header';
 
@@ -18,7 +18,7 @@ type Props = {
 	homePage: Object
 };
 
-class HomePage extends Component<Props> {
+export class HomePage extends Component<Props> {
 	constructor() {
 		super();
 		(this: any).handleFrom = this.handleFrom.bind(this);
