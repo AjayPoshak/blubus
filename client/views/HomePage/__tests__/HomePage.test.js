@@ -1,15 +1,7 @@
 import React from 'react';
 import { mount } from 'enzyme';
-import { MemoryRouter } from 'react-router';
 import { HomePage } from '../index';
-// import { fullRender } from '../../../utils/testUtils';
-function fullRender(props = {}) {
-	return mount(
-		<MemoryRouter>
-			<HomePage {...props} />
-		</MemoryRouter>
-	);
-}
+import { fullRender } from '../../../utils/testUtils';
 
 describe('Home Page component', () => {
 	const mockData = {
@@ -21,7 +13,7 @@ describe('Home Page component', () => {
 	let wrapper;
 
 	beforeAll(() => {
-		wrapper = fullRender(mockData);
+		wrapper = fullRender(HomePage, mockData);
 	});
 
 	it('renders Header component', () => {
