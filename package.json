@@ -65,16 +65,16 @@
     "uglifyjs-webpack-plugin": "^1.2.5",
     "webpack": "^4.9.1",
     "webpack-cli": "^2.1.4",
-    "webpack-node-externals": "^1.7.2"
+	"webpack-node-externals": "^1.7.2",
+	"enzyme": "^3.3.0",
+    "enzyme-adapter-react-16": "^1.1.1",
+    "enzyme-to-json": "^3.3.4"
   },
   "devDependencies": {
     "babel-cli": "^6.26.0",
     "babel-core": "^6.26.3",
     "babel-eslint": "^8.2.5",
     "babel-jest": "^23.2.0",
-    "enzyme": "^3.3.0",
-    "enzyme-adapter-react-16": "^1.1.1",
-    "enzyme-to-json": "^3.3.4",
     "eslint-config-airbnb": "^16.1.0",
     "eslint-plugin-flowtype": "^2.49.3",
     "eslint-plugin-import": "^2.12.0",
