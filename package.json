@@ -16,11 +16,11 @@
     "test:watch": "jest --config ./jest.config.json --watch",
     "test:debug": "node --inspect-brk ./node_modules/.bin/jest --config ./jest.config.json --runInBand --watch",
     "test:debug:win": "node --inspect-brk ./node_modules/jest/bin/jest.js --config ./jest.config.json --runInBand --watch",
-	"test:snapshot": "jest --config ./jest.config.json -u",
-	"flow start": "flow start",
-	"flow stop": "flow stop",
-	"flow status": "flow status",
-	"flow coverage": "flow coverage"
+    "test:snapshot": "jest --config ./jest.config.json -u",
+    "flow start": "flow start",
+    "flow stop": "flow stop",
+    "flow status": "flow status",
+    "flow coverage": "flow coverage"
   },
   "lint-staged": {
     "*.js": [
@@ -45,6 +45,7 @@
     "babel-preset-stage-2": "^6.24.1",
     "brotli-webpack-plugin": "^1.0.0",
     "html-webpack-plugin": "^3.2.0",
+    "jest": "^23.2.0",
     "koa": "^2.5.1",
     "koa-bodyparser": "^4.2.1",
     "koa-router": "^7.4.0",
@@ -52,6 +53,7 @@
     "prettier": "^1.12.1",
     "prop-types": "^15.6.1",
     "raven": "^2.6.3",
+    "rc-calendar": "^9.6.2",
     "react": "^16.4.0",
     "react-dom": "^16.4.0",
     "react-redux": "^5.0.7",
@@ -80,7 +82,6 @@
     "eslint-plugin-react": "^7.8.2",
     "flow-bin": "^0.76.0",
     "husky": "^0.14.3",
-    "jest": "^23.2.0",
     "lint-staged": "^7.1.2",
     "react-test-renderer": "^16.4.1",
     "webpack-dev-server": "^3.1.4"
