@@ -56,5 +56,7 @@ const renderFullPage = (html, preloadedState, styles, bundles) => `<!DOCTYPE htm
 			})
 		}
 	</script>
+	<!-- Third Party CSS for calendar module -->
+	<link rel="stylesheet" href="/public/rc-calendar.css">
 	</html>`;
 export default renderFullPage;

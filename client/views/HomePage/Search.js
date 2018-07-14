@@ -2,6 +2,7 @@ import React, { Fragment, Component } from 'react';
 import PropTypes from 'prop-types';
 
 import SearchResults from './SearchResults';
+import { debounce } from '../../utils/helpers';
 import { search } from '../../actions/homePage';
 import TextInput from '../../components/TextInput';
 import { MAX_ITEMS_IN_SEARCH_RESULTS } from '../../utils/constants';
@@ -10,6 +11,8 @@ class Search extends Component {
 	constructor() {
 		super();
 		this.handleChange = this.handleChange.bind(this);
+		this.updateChange = this.updateChange.bind(this);
+		this.searchDebounced = debounce(this.updateChange, 500);
 		this.resultItemSelection = this.resultItemSelection.bind(this);
 		this.state = {
 			value: '',
@@ -17,10 +20,14 @@ class Search extends Component {
 		};
 	}
 
+	updateChange(value) {
+		this.props.dispatch(search(value));
+	}
+
 	handleChange(value) {
 		this.setState({ value });
 		value.length === 0 ? this.setState({ showResults: false }) : this.setState({ showResults: true });
-		this.props.dispatch(search(value));
+		this.searchDebounced(value);
 	}
 
 	resultItemSelection(data) {
