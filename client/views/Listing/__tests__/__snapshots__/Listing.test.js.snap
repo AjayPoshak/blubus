@@ -3,7 +3,7 @@
 exports[`Schedules listing component UI snapshots 1`] = `
 <section>
   <section
-    className="sc-jTzLTM kmjhrp"
+    className="style__HeaderWrapper-s1kbzlmn-0 kIONTA"
   >
     <a
       href="/"
@@ -16,15 +16,15 @@ exports[`Schedules listing component UI snapshots 1`] = `
     >
       <header>
         <span
-          className="sc-gZMcBi jZgJdZ"
+          className="logo__TextWrapper-nm9i2-0 huAJcX"
         >
           <img
             alt="blubus logo"
-            className="sc-gqjmRU cqEElJ"
+            className="logo__LogoImg-nm9i2-1 eMKueu"
             src="../../public/images/BluBus_192x192.png"
           />
           <h1
-            className="sc-VigVT beOaog"
+            className="logo__LogoText-nm9i2-2 bObqUd"
           >
             BluBus
           </h1>
@@ -34,14 +34,14 @@ exports[`Schedules listing component UI snapshots 1`] = `
   </section>
   <section>
     <header
-      className="sc-htpNat kiiLbN"
+      className="style__JourneyDetailWrapper-s1qs7nmh-2 bITsiF"
     >
       <h2>
         kibuye
       </h2>
       <img
         alt="arrow"
-        className="sc-bxivhb kIfBUr"
+        className="style__FromToArrow-s1qs7nmh-3 dSHauv"
         src="https://res.cloudinary.com/ddbxa4afa/image/upload/v1528049570/blubus/right-arrow.svg"
       />
       <h2>
@@ -50,22 +50,22 @@ exports[`Schedules listing component UI snapshots 1`] = `
     </header>
   </section>
   <article
-    className="sc-bdVaJa fRGHqF"
+    className="style__ListViewWrapper-s1qs7nmh-0 iCkqyl"
   >
     <section
-      className="sc-bwzfXH hcNNxv"
+      className="style__CardWrapper-s1qs7nmh-1 cPWONS"
       onClick={[Function]}
     >
       <header
-        className="sc-ifAKCX bWqqkl"
+        className="style__CardHeader-s1qs7nmh-4 hMmTCZ"
       >
         <h2
-          className="sc-EHOje hlHsbz"
+          className="style__CompanyName-s1qs7nmh-5 gDLqQP"
         >
           MR Travels
         </h2>
         <p
-          className="sc-bZQynM gUHbKa"
+          className="style__Currency-s1qs7nmh-6 kitmCW"
         >
           
            
@@ -73,25 +73,25 @@ exports[`Schedules listing component UI snapshots 1`] = `
         </p>
       </header>
       <article
-        className="sc-gzVnrw kyzxxf"
+        className="style__Timings-s1qs7nmh-7 keHeXf"
       >
         <p>
           
         </p>
         <img
           alt="traveling-bus"
-          className="sc-dnqmqq cswPpA"
+          className="style__BusIcon-s1qs7nmh-9 ilmrMz"
           src="https://res.cloudinary.com/ddbxa4afa/image/upload/v1528048630/blubus/traveling-bus.svg"
         />
         <p>
           
         </p>
         <div
-          className="sc-htoDjs blXLnW"
+          className="style__TimerWrapper-s1qs7nmh-8 gGJsSN"
         >
           <img
             alt="timer"
-            className="sc-iwsKbI chODOK"
+            className="style__Timer-s1qs7nmh-10 cmfDyD"
             src="https://res.cloudinary.com/ddbxa4afa/image/upload/v1528048884/blubus/timer.svg"
           />
           <p>
@@ -102,19 +102,19 @@ exports[`Schedules listing component UI snapshots 1`] = `
       </article>
     </section>
     <section
-      className="sc-bwzfXH hcNNxv"
+      className="style__CardWrapper-s1qs7nmh-1 cPWONS"
       onClick={[Function]}
     >
       <header
-        className="sc-ifAKCX bWqqkl"
+        className="style__CardHeader-s1qs7nmh-4 hMmTCZ"
       >
         <h2
-          className="sc-EHOje hlHsbz"
+          className="style__CompanyName-s1qs7nmh-5 gDLqQP"
         >
           MRP Travels
         </h2>
         <p
-          className="sc-bZQynM gUHbKa"
+          className="style__Currency-s1qs7nmh-6 kitmCW"
         >
           
            
@@ -122,25 +122,25 @@ exports[`Schedules listing component UI snapshots 1`] = `
         </p>
       </header>
       <article
-        className="sc-gzVnrw kyzxxf"
+        className="style__Timings-s1qs7nmh-7 keHeXf"
       >
         <p>
           
         </p>
         <img
           alt="traveling-bus"
-          className="sc-dnqmqq cswPpA"
+          className="style__BusIcon-s1qs7nmh-9 ilmrMz"
           src="https://res.cloudinary.com/ddbxa4afa/image/upload/v1528048630/blubus/traveling-bus.svg"
         />
         <p>
           
         </p>
         <div
-          className="sc-htoDjs blXLnW"
+          className="style__TimerWrapper-s1qs7nmh-8 gGJsSN"
         >
           <img
             alt="timer"
-            className="sc-iwsKbI chODOK"
+            className="style__Timer-s1qs7nmh-10 cmfDyD"
             src="https://res.cloudinary.com/ddbxa4afa/image/upload/v1528048884/blubus/timer.svg"
           />
           <p>
