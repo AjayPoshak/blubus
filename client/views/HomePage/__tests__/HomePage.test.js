@@ -1,5 +1,7 @@
 import React from 'react';
 import { mount } from 'enzyme';
+import renderer from 'react-test-renderer';
+
 import { HomePage } from '../index';
 import { fullRender } from '../../../utils/testUtils';
 
@@ -119,5 +121,10 @@ describe('Home Page component', () => {
 			.simulate('focus');
 		wrapper.find('Calendar .rc-calendar-selected-day').simulate('click');
 		expect(wrapper.find('Calendar').length).toBe(0);
+	});
+
+	it('UI snapshot of homePage component', () => {
+		const tree = renderer.create(wrapper).toJSON();
+		expect(tree).toMatchSnapshot();
 	});
 });
