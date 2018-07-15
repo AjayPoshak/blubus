@@ -50,6 +50,11 @@
 				],
 				"react",
 				"stage-2"
+			],
+			"plugins": [
+				["babel-plugin-styled-components", {
+					"ssr": true
+				  }]
 			]
 		}
 	}
