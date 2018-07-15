@@ -1,87 +1,53 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Testing ListingCard Component compare snapshot for UI changes 1`] = `
-<ListingCard
-  arrivalTime="11:00 AM"
-  clickHandler={[Function]}
-  companyName="Pawan Tours"
-  currency="#"
-  departureTime="12:30 PM"
-  price="511"
-  travelTime="9 hours"
+<section
+  className="sc-bwzfXH hcNNxv"
+  onClick={[Function]}
 >
-  <styled.section
-    onClick={[Function]}
+  <header
+    className="sc-ifAKCX bWqqkl"
   >
-    <section
-      className="sc-bwzfXH hcNNxv"
-      onClick={[Function]}
+    <h2
+      className="sc-EHOje hlHsbz"
     >
-      <styled.header>
-        <header
-          className="sc-ifAKCX bWqqkl"
-        >
-          <styled.h2>
-            <h2
-              className="sc-EHOje hlHsbz"
-            >
-              Pawan Tours
-            </h2>
-          </styled.h2>
-          <styled.p>
-            <p
-              className="sc-bZQynM gUHbKa"
-            >
-              511
-               
-              #
-            </p>
-          </styled.p>
-        </header>
-      </styled.header>
-      <styled.article>
-        <article
-          className="sc-gzVnrw kyzxxf"
-        >
-          <p>
-            11:00 AM
-          </p>
-          <styled.img
-            alt="traveling-bus"
-            src="https://res.cloudinary.com/ddbxa4afa/image/upload/v1528048630/blubus/traveling-bus.svg"
-          >
-            <img
-              alt="traveling-bus"
-              className="sc-dnqmqq cswPpA"
-              src="https://res.cloudinary.com/ddbxa4afa/image/upload/v1528048630/blubus/traveling-bus.svg"
-            />
-          </styled.img>
-          <p>
-            12:30 PM
-          </p>
-          <styled.div>
-            <div
-              className="sc-htoDjs blXLnW"
-            >
-              <styled.img
-                alt="timer"
-                src="https://res.cloudinary.com/ddbxa4afa/image/upload/v1528048884/blubus/timer.svg"
-              >
-                <img
-                  alt="timer"
-                  className="sc-iwsKbI chODOK"
-                  src="https://res.cloudinary.com/ddbxa4afa/image/upload/v1528048884/blubus/timer.svg"
-                />
-              </styled.img>
-              <p>
-                9 hours
-                 hours
-              </p>
-            </div>
-          </styled.div>
-        </article>
-      </styled.article>
-    </section>
-  </styled.section>
-</ListingCard>
+      Pawan Tours
+    </h2>
+    <p
+      className="sc-bZQynM gUHbKa"
+    >
+      511
+       
+      #
+    </p>
+  </header>
+  <article
+    className="sc-gzVnrw kyzxxf"
+  >
+    <p>
+      11:00 AM
+    </p>
+    <img
+      alt="traveling-bus"
+      className="sc-dnqmqq cswPpA"
+      src="https://res.cloudinary.com/ddbxa4afa/image/upload/v1528048630/blubus/traveling-bus.svg"
+    />
+    <p>
+      12:30 PM
+    </p>
+    <div
+      className="sc-htoDjs blXLnW"
+    >
+      <img
+        alt="timer"
+        className="sc-iwsKbI chODOK"
+        src="https://res.cloudinary.com/ddbxa4afa/image/upload/v1528048884/blubus/timer.svg"
+      />
+      <p>
+        9 hours
+         hours
+      </p>
+    </div>
+  </article>
+</section>
 `;
