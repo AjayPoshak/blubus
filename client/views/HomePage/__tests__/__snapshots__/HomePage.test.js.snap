@@ -1,0 +1,117 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Home Page component UI snapshot of homePage component 1`] = `
+<section>
+  <section>
+    <section
+      className="sc-cSHVUG bnIZCh"
+    >
+      <a
+        href="/"
+        onClick={[Function]}
+        style={
+          Object {
+            "textDecoration": "none",
+          }
+        }
+      >
+        <header>
+          <span
+            className="sc-jTzLTM fuwsYz"
+          >
+            <img
+              alt="blubus logo"
+              className="sc-fjdhpX dwYdUd"
+              src="../../public/images/BluBus_192x192.png"
+            />
+            <h1
+              className="sc-jzJRlG eyyhKO"
+            >
+              BluBus
+            </h1>
+          </span>
+        </header>
+      </a>
+    </section>
+    <article
+      className="sc-bdVaJa idQcAk"
+    >
+      <span
+        className="sc-dnqmqq ixBtRV"
+      >
+        <input
+          className="sc-htoDjs krWeMp"
+          icon="https://res.cloudinary.com/ddbxa4afa/image/upload/v1527944418/blubus/location.svg"
+          onChange={[Function]}
+          placeholder="Choose your location"
+          type="text"
+          value=""
+        />
+        <img
+          alt="https://res.cloudinary.com/ddbxa4afa/image/upload/v1527944418/blubus/location.svg"
+          className="sc-iwsKbI jexNcF"
+          src="https://res.cloudinary.com/ddbxa4afa/image/upload/v1527944418/blubus/location.svg"
+        />
+      </span>
+      <div
+        style={
+          Object {
+            "marginBottom": "70px",
+            "marginTop": "70px",
+          }
+        }
+      >
+        <span
+          className="sc-dnqmqq ixBtRV"
+        >
+          <input
+            className="sc-htoDjs krWeMp"
+            icon="https://res.cloudinary.com/ddbxa4afa/image/upload/v1527944416/blubus/destination.svg"
+            onChange={[Function]}
+            placeholder="Choose your destination"
+            type="text"
+            value=""
+          />
+          <img
+            alt="https://res.cloudinary.com/ddbxa4afa/image/upload/v1527944416/blubus/destination.svg"
+            className="sc-iwsKbI jexNcF"
+            src="https://res.cloudinary.com/ddbxa4afa/image/upload/v1527944416/blubus/destination.svg"
+          />
+        </span>
+      </div>
+      <span
+        className="sc-dnqmqq ixBtRV"
+      >
+        <input
+          className="sc-htoDjs krWeMp"
+          icon="https://res.cloudinary.com/ddbxa4afa/image/upload/v1531114873/blubus/calendar.svg"
+          onChange={[Function]}
+          onFocus={[Function]}
+          placeholder="Choose date for journey"
+          type="text"
+          value=""
+        />
+        <img
+          alt="https://res.cloudinary.com/ddbxa4afa/image/upload/v1531114873/blubus/calendar.svg"
+          className="sc-iwsKbI jexNcF"
+          src="https://res.cloudinary.com/ddbxa4afa/image/upload/v1531114873/blubus/calendar.svg"
+        />
+      </span>
+      <div
+        style={
+          Object {
+            "marginTop": "70px",
+          }
+        }
+      >
+        <button
+          className="sc-VigVT iQCaPI"
+          onClick={[Function]}
+        >
+          Search Buses
+        </button>
+      </div>
+    </article>
+  </section>
+</section>
+`;

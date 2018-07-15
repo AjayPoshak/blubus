@@ -1,7 +1,7 @@
 /* eslint function-paren-newline: ["error", "never"] */
 import React from 'react';
 import { render, shallow, mount } from 'enzyme';
-import { mountToJson } from 'enzyme-to-json';
+import renderer from 'react-test-renderer';
 
 import ListingCard from '../ListingCard';
 
@@ -60,16 +60,20 @@ describe('Testing ListingCard Component', () => {
 
 	// Compare snapshot
 	it('compare snapshot for UI changes', () => {
-		const wrapper = mount(
-			<ListingCard
-				companyName="Pawan Tours"
-				currency="#"
-				price="511"
-				arrivalTime="11:00 AM"
-				departureTime="12:30 PM"
-				travelTime="9 hours"
-			/>
-		);
-		expect(mountToJson(wrapper)).toMatchSnapshot();
+		const wrapper = renderer
+			.create(
+				mount(
+					<ListingCard
+						companyName="Pawan Tours"
+						currency="#"
+						price="511"
+						arrivalTime="11:00 AM"
+						departureTime="12:30 PM"
+						travelTime="9 hours"
+					/>
+				)
+			)
+			.toJSON();
+		expect(wrapper).toMatchSnapshot();
 	});
 });
