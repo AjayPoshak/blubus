@@ -4,7 +4,7 @@ exports[`Home Page component UI snapshot of homePage component 1`] = `
 <section>
   <section>
     <section
-      className="sc-cSHVUG bnIZCh"
+      className="style__HeaderWrapper-s1kbzlmn-0 kIONTA"
     >
       <a
         href="/"
@@ -17,15 +17,15 @@ exports[`Home Page component UI snapshot of homePage component 1`] = `
       >
         <header>
           <span
-            className="sc-jTzLTM fuwsYz"
+            className="logo__TextWrapper-nm9i2-0 huAJcX"
           >
             <img
               alt="blubus logo"
-              className="sc-fjdhpX dwYdUd"
+              className="logo__LogoImg-nm9i2-1 eMKueu"
               src="../../public/images/BluBus_192x192.png"
             />
             <h1
-              className="sc-jzJRlG eyyhKO"
+              className="logo__LogoText-nm9i2-2 bObqUd"
             >
               BluBus
             </h1>
@@ -34,13 +34,13 @@ exports[`Home Page component UI snapshot of homePage component 1`] = `
       </a>
     </section>
     <article
-      className="sc-bdVaJa idQcAk"
+      className="style__PageWrapper-xm59nd-0 dhcnhC"
     >
       <span
-        className="sc-dnqmqq ixBtRV"
+        className="style__InputWrapper-t4p2yc-1 eCZAey"
       >
         <input
-          className="sc-htoDjs krWeMp"
+          className="style__Input-t4p2yc-0 jGewFw"
           icon="https://res.cloudinary.com/ddbxa4afa/image/upload/v1527944418/blubus/location.svg"
           onChange={[Function]}
           placeholder="Choose your location"
@@ -49,7 +49,7 @@ exports[`Home Page component UI snapshot of homePage component 1`] = `
         />
         <img
           alt="https://res.cloudinary.com/ddbxa4afa/image/upload/v1527944418/blubus/location.svg"
-          className="sc-iwsKbI jexNcF"
+          className="style__Icon-t4p2yc-2 gyKMQZ"
           src="https://res.cloudinary.com/ddbxa4afa/image/upload/v1527944418/blubus/location.svg"
         />
       </span>
@@ -62,10 +62,10 @@ exports[`Home Page component UI snapshot of homePage component 1`] = `
         }
       >
         <span
-          className="sc-dnqmqq ixBtRV"
+          className="style__InputWrapper-t4p2yc-1 eCZAey"
         >
           <input
-            className="sc-htoDjs krWeMp"
+            className="style__Input-t4p2yc-0 jGewFw"
             icon="https://res.cloudinary.com/ddbxa4afa/image/upload/v1527944416/blubus/destination.svg"
             onChange={[Function]}
             placeholder="Choose your destination"
@@ -74,16 +74,16 @@ exports[`Home Page component UI snapshot of homePage component 1`] = `
           />
           <img
             alt="https://res.cloudinary.com/ddbxa4afa/image/upload/v1527944416/blubus/destination.svg"
-            className="sc-iwsKbI jexNcF"
+            className="style__Icon-t4p2yc-2 gyKMQZ"
             src="https://res.cloudinary.com/ddbxa4afa/image/upload/v1527944416/blubus/destination.svg"
           />
         </span>
       </div>
       <span
-        className="sc-dnqmqq ixBtRV"
+        className="style__InputWrapper-t4p2yc-1 eCZAey"
       >
         <input
-          className="sc-htoDjs krWeMp"
+          className="style__Input-t4p2yc-0 jGewFw"
           icon="https://res.cloudinary.com/ddbxa4afa/image/upload/v1531114873/blubus/calendar.svg"
           onChange={[Function]}
           onFocus={[Function]}
@@ -93,7 +93,7 @@ exports[`Home Page component UI snapshot of homePage component 1`] = `
         />
         <img
           alt="https://res.cloudinary.com/ddbxa4afa/image/upload/v1531114873/blubus/calendar.svg"
-          className="sc-iwsKbI jexNcF"
+          className="style__Icon-t4p2yc-2 gyKMQZ"
           src="https://res.cloudinary.com/ddbxa4afa/image/upload/v1531114873/blubus/calendar.svg"
         />
       </span>
@@ -105,7 +105,7 @@ exports[`Home Page component UI snapshot of homePage component 1`] = `
         }
       >
         <button
-          className="sc-VigVT iQCaPI"
+          className="Button__ButtonStyle-gjwxrp-0 fiTpLU"
           onClick={[Function]}
         >
           Search Buses

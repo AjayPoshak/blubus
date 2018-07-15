@@ -2,19 +2,19 @@
 
 exports[`Testing ListingCard Component compare snapshot for UI changes 1`] = `
 <section
-  className="sc-bwzfXH hcNNxv"
+  className="style__CardWrapper-s1qs7nmh-1 cPWONS"
   onClick={[Function]}
 >
   <header
-    className="sc-ifAKCX bWqqkl"
+    className="style__CardHeader-s1qs7nmh-4 hMmTCZ"
   >
     <h2
-      className="sc-EHOje hlHsbz"
+      className="style__CompanyName-s1qs7nmh-5 gDLqQP"
     >
       Pawan Tours
     </h2>
     <p
-      className="sc-bZQynM gUHbKa"
+      className="style__Currency-s1qs7nmh-6 kitmCW"
     >
       511
        
@@ -22,25 +22,25 @@ exports[`Testing ListingCard Component compare snapshot for UI changes 1`] = `
     </p>
   </header>
   <article
-    className="sc-gzVnrw kyzxxf"
+    className="style__Timings-s1qs7nmh-7 keHeXf"
   >
     <p>
       11:00 AM
     </p>
     <img
       alt="traveling-bus"
-      className="sc-dnqmqq cswPpA"
+      className="style__BusIcon-s1qs7nmh-9 ilmrMz"
       src="https://res.cloudinary.com/ddbxa4afa/image/upload/v1528048630/blubus/traveling-bus.svg"
     />
     <p>
       12:30 PM
     </p>
     <div
-      className="sc-htoDjs blXLnW"
+      className="style__TimerWrapper-s1qs7nmh-8 gGJsSN"
     >
       <img
         alt="timer"
-        className="sc-iwsKbI chODOK"
+        className="style__Timer-s1qs7nmh-10 cmfDyD"
         src="https://res.cloudinary.com/ddbxa4afa/image/upload/v1528048884/blubus/timer.svg"
       />
       <p>
