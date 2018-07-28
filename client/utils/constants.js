@@ -8,3 +8,4 @@ export const MAX_ITEMS_IN_SEARCH_RESULTS = 5;
 export const mobilePattern = /^\d{10}$/;
 export const numberPattern = /^\d{1,2}$/;
 export const emailPattern = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
+export const excludeSpecialChars = /^[a-zA-Z0-9]*$/;

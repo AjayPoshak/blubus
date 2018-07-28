@@ -3,8 +3,9 @@ import React, { Component, Fragment } from 'react';
 
 import Button from '../../components/Button';
 import TextInput from '../../components/TextInput';
+import { EMAIL_ERROR, MOBILE_ERROR, NAME_ERROR, AGE_ERROR } from './constants';
 import { ButtonWrapper, ContactInfo, PassengerInfo, InfoHeader } from './style';
-import { emailPattern, mobilePattern, numberPattern } from '../../utils/constants';
+import { emailPattern, mobilePattern, numberPattern, excludeSpecialChars } from '../../utils/constants';
 
 class UserDetails extends Component {
 	constructor() {
@@ -31,6 +32,10 @@ class UserDetails extends Component {
 		return regExPattern.test(value);
 	}
 
+	isEmpty(value) {
+		return value.length === 0;
+	}
+
 	handleEmail(value) {
 		this.setState({ email: value });
 		const isValidPattern = this.validateInputAgainstPattern(emailPattern, value);
@@ -48,7 +53,9 @@ class UserDetails extends Component {
 	handleName(value) {
 		this.setState({ name: value });
 		if (value && value.length > 0) {
-			this.setState({ showNameError: false });
+			const isValidPattern = this.validateInputAgainstPattern(excludeSpecialChars, value);
+			!isValidPattern && this.setState({ showNameError: true });
+			isValidPattern && this.setState({ showNameError: false });
 		} else {
 			this.setState({ showNameError: true });
 		}
@@ -62,19 +69,23 @@ class UserDetails extends Component {
 	}
 
 	confirmDetails() {
-		if (
-			!this.state.showMobileError &&
-			!this.state.showEmailError &&
-			!this.state.showNameError &&
-			!this.state.showAgeError
-		) {
-			// Update user details
-			this.props.handleOrderSummary(true);
-		}
-		this.handleEmail(this.state.email);
+		// const emailValidity = this.isValid(emailPattern, this.state.email);
 		this.handleMobile(this.state.mobile);
 		this.handleAge(this.state.age);
 		this.handleName(this.state.name);
+		// const { showMobileError, showEmailError, showNameError, showAgeError } = this.state;
+		this.setState(prevState => {
+			if (
+				!prevState.showMobileError &&
+				!prevState.showEmailError &&
+				!prevState.showNameError &&
+				!prevState.showAgeError
+			) {
+				// Update user details
+				this.props.handleOrderSummary(true);
+			}
+			return {};
+		});
 	}
 
 	render() {
@@ -89,7 +100,7 @@ class UserDetails extends Component {
 						value={this.state.email}
 						placeholder="Enter your email"
 						handleChange={this.handleEmail}
-						error="please enter a valid email"
+						error={EMAIL_ERROR}
 						showError={this.state.showEmailError}
 						icon="https://res.cloudinary.com/ddbxa4afa/image/upload/v1528611235/blubus/email.svg"
 					/>
@@ -98,7 +109,7 @@ class UserDetails extends Component {
 						value={this.state.mobile}
 						handleChange={this.handleMobile}
 						placeholder="Enter your mobile"
-						error="please enter a valid mobile"
+						error={MOBILE_ERROR}
 						showError={this.state.showMobileError}
 						icon="https://res.cloudinary.com/ddbxa4afa/image/upload/v1528611234/blubus/mobile.svg"
 					/>
@@ -113,7 +124,7 @@ class UserDetails extends Component {
 							value={this.state.name}
 							placeholder="Enter your name"
 							handleChange={this.handleName}
-							error="please enter your name"
+							error={NAME_ERROR}
 							showError={this.state.showNameError}
 							icon="https://res.cloudinary.com/ddbxa4afa/image/upload/v1528623999/blubus/user.svg"
 						/>
@@ -122,7 +133,7 @@ class UserDetails extends Component {
 							value={this.state.age}
 							placeholder="Enter your age"
 							handleChange={this.handleAge}
-							error="please enter a valid age"
+							error={AGE_ERROR}
 							showError={this.state.showAgeError}
 							icon="https://res.cloudinary.com/ddbxa4afa/image/upload/v1528624264/blubus/info.svg"
 						/>

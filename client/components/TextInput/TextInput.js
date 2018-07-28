@@ -21,7 +21,7 @@ class TextInput extends Component {
 					<Input type={type} onChange={this.handleChange} {...this.props} value={this.props.value} />
 					{icon && <Icon src={icon} alt={icon} />}
 					{showError && (
-						<ErrorWrapper>
+						<ErrorWrapper id="error">
 							<ErrorMsg>{error}</ErrorMsg>
 						</ErrorWrapper>
 					)}
