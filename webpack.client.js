@@ -3,7 +3,8 @@ const path = require('path'),
 	AssetsPlugin = require('assets-webpack-plugin'),
 	BrotliPlugin = require('brotli-webpack-plugin'),
 	HtmlWebpackPlugin = require('html-webpack-plugin'),
-	UglifyJsPlugin = require('uglifyjs-webpack-plugin');
+	UglifyJsPlugin = require('uglifyjs-webpack-plugin'),
+	WriteFilePlugin = require('write-file-webpack-plugin');
 
 const isProd = process.env.NODE_ENV === 'production';
 
@@ -11,6 +12,7 @@ const isProd = process.env.NODE_ENV === 'production';
  * Plugins for dev environment
  */
 const devPlugins = [
+	new WriteFilePlugin(),
 	new HtmlWebpackPlugin({
 		template: './client/index.html',
 		title: 'Bus Booking in Africa'

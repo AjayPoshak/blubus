@@ -3,58 +3,73 @@
 		"development": {
 			"presets": [
 				[
-					"env",
+					"@babel/preset-env",
 					{
 						"targets": {
-							"browsers": ["last 2 versions"],
+							"browsers": [
+								"last 2 versions"
+							],
 							"node": "current"
 						},
 						"debug": false
 					}
 				],
-				"react",
-				"stage-2"
+				"@babel/preset-react",
+				"@babel/preset-flow"
 			],
 			"plugins": [
-				["babel-plugin-styled-components", {
-					"ssr": true
-				  }]
+				[
+					"babel-plugin-styled-components",
+					{
+						"ssr": true
+					}
+				],
 			]
 		},
 		"production": {
 			"presets": [
 				[
-					"env",
+					"@babel/preset-env",
 					{
 						"targets": {
-							"browsers": ["last 2 versions"],
+							"browsers": [
+								"last 2 versions"
+							],
 							"node": "current"
 						},
 						"debug": false
 					}
 				],
-				"react",
-				"stage-2"
+				"@babel/preset-react",
+				"@babel/preset-flow"
 			],
 			"plugins": [
-				["babel-plugin-styled-components", {
-					"ssr": true
-				  }]
+				[
+					"babel-plugin-styled-components",
+					{
+						"ssr": true
+					}
+				]
 			]
 		},
 		"test": {
 			"presets": [
 				[
-					"env",
-					{"modules": "commonjs"}
+					"@babel/preset-env",
+					{
+						"modules": "commonjs"
+					}
 				],
-				"react",
-				"stage-2"
+				"@babel/preset-react",
+				"@babel/preset-flow"
 			],
 			"plugins": [
-				["babel-plugin-styled-components", {
-					"ssr": true
-				  }]
+				[
+					"babel-plugin-styled-components",
+					{
+						"ssr": true
+					}
+				]
 			]
 		}
 	}
