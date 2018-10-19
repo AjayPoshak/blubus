@@ -12,6 +12,7 @@ const isProd = process.env.NODE_ENV === 'production';
  * Plugins for dev environment
  */
 const devPlugins = [
+	new webpack.HotModuleReplacementPlugin(),
 	new WriteFilePlugin(),
 	new HtmlWebpackPlugin({
 		template: './client/index.html',
@@ -23,6 +24,7 @@ const devPlugins = [
 		path: path.resolve(__dirname, 'build')
 	}),
 	new webpack.DefinePlugin({
+		__DEV__: true,
 		__ENV__: JSON.stringify(process.env.NODE_ENV || 'development')
 	})
 ];
@@ -48,22 +50,28 @@ const prodPlugins = [
 const pluginList = isProd ? [...devPlugins, ...prodPlugins] : devPlugins;
 
 module.exports = {
+	name: 'client',
+	target: 'web',
 	// May add cheap-module-source-map to devtool to generate source maps to prod builds
 	devtool: isProd ? '' : 'inline-source-map',
-	entry: './client/index.js',
+	entry: ['webpack-dev-server/client?http://localhost:8080/', './client/index.js'],
 	output: {
 		filename: isProd ? '[name].[chunkhash].js' : '[name].bundle.js',
 		path: path.resolve(__dirname, 'build/client'),
-		publicPath: 'build/client/'
+		publicPath: 'http://localhost:8080/build/client/'
 	},
 	module: {
 		rules: [{ test: /\.js$/, loader: 'babel-loader', exclude: /node_modules/ }]
 	},
 	devServer: {
+		hot: true,
 		port: 8080,
-		compress: true,
-		historyApiFallback: true,
-		contentBase: path.join(__dirname, 'build/client')
+		noInfo: true, // only errors & warns on hot reload
+		historyApiFallback: true, // true for index.html upon 404, object for multiple paths
+		contentBase: path.join(__dirname, 'build/client'),
+		headers: {
+			'Access-Control-Allow-Origin': '*'
+		}
 	},
 	plugins: pluginList,
 	optimization: {
