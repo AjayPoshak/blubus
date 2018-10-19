@@ -45,13 +45,14 @@ const renderFullPage = (html, preloadedState, styles, bundles) => `<!DOCTYPE htm
  crossorigin=anonymous></script>
 	<script>
 		window.__PRELOADED_STATE__ = ${JSON.stringify(preloadedState).replace(/</g, '\\u003c')}
+		window.shouldAddSW = ${process.env.__DEV__ === true}
 	</script>
 	<script src=${bundles.manifest.js}></script>
 	<script src=${bundles.main.js}></script>
 	<script src=${bundles.vendors.js}></script>
 	<script>
 		if('serviceWorker' in navigator) {
-			window.addEventListener('load', () => {
+			window.shouldAddSW && window.addEventListener('load', () => {
 				navigator.serviceWorker.register('./service-worker.js')
 			})
 		}
