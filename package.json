@@ -17,8 +17,6 @@
 		"test": "jest --config ./jest.config.json",
 		"test:watch": "jest --config ./jest.config.json --watch",
 		"test:debug": "node --inspect-brk ./node_modules/.bin/jest --config ./jest.config.json --runInBand --watch",
-		"test:debug:win":
-			"node --inspect-brk ./node_modules/jest/bin/jest.js --config ./jest.config.json --runInBand --watch",
 		"test:snapshot": "jest --config ./jest.config.json -u",
 		"flow start": "flow start",
 		"flow stop": "flow stop",
