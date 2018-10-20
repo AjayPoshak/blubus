@@ -1,9 +1,7 @@
 {
 	"extends": ["airbnb", "plugin:flowtype/recommended"],
 	"parser": "babel-eslint",
-	"plugins": [
-		"flowtype"
-	],
+	"plugins": ["flowtype"],
 	"rules": {
 		"no-tabs": "off",
 		"one-var": "off",
@@ -13,10 +11,11 @@
 		"class-methods-use-this": "off",
 		"react/jsx-filename-extension": "off",
 		"react/jsx-indent-props": [4, "tab"],
-		"object-curly-newline":"off",
+		"object-curly-newline": "off",
 		"comma-dangle": ["error", "never"],
 		"no-unused-expressions": ["error", { "allowShortCircuit": true, "allowTernary": true }],
-		"function-paren-newline": "off"
+		"function-paren-newline": "off",
+		"no-underscore-dangle": "off"
 	},
 	"globals": {
 		"node": true,
