@@ -1,4 +1,8 @@
-export const createScriptTag = script => `<script src=${script}></script>`;
+export const createScriptTag = (scripts) => {
+	const scriptNames = Object.keys(scripts);
+	const scArr = scriptNames.map(script => script && `<script src=${scripts[script].js}></script>`);
+	return scArr.join('');
+};
 
 const renderFullPage = (html, preloadedState, styles, bundles) => `<!DOCTYPE html>
 	<html lang="en">
@@ -46,9 +50,7 @@ const renderFullPage = (html, preloadedState, styles, bundles) => `<!DOCTYPE htm
 		window.__PRELOADED_STATE__ = ${JSON.stringify(preloadedState).replace(/</g, '\\u003c')}
 		window.shouldAddSW = ${process.env.__DEV__ === true}
 	</script>
-	<script src=${bundles.manifest.js}></script>
-	<script src=${bundles.main.js}></script>
-	<script src=${bundles.vendors.js}></script>
+	${createScriptTag(bundles)}
 	<script>
 		if('serviceWorker' in navigator) {
 			window.shouldAddSW && window.addEventListener('load', () => {
