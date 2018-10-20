@@ -12,3 +12,7 @@ Please feel free to ask questions.
 	* Webpack 4 - bundling assets
 	* Flow for static type checking
 	* Jest & Enzyme - For Unit Test Cases
+
+### Lighthouse scores 😎
+
+![lighthouse-scores](https://raw.githubusercontent.com/AjayPoshak/blubus/8e31ddec80951fd48f6328e7562d97b7c7db3df0/public/images/lighthouse-score.png)
