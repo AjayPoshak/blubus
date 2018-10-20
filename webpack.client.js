@@ -9,11 +9,9 @@ const path = require('path'),
 const isProd = process.env.NODE_ENV === 'production';
 
 /**
- * Plugins for dev environment
+ * Common Plugins
  */
-const devPlugins = [
-	new webpack.HotModuleReplacementPlugin(),
-	new WriteFilePlugin(),
+const commonPlugins = [
 	new HtmlWebpackPlugin({
 		template: './client/index.html',
 		title: 'Bus Booking in Africa'
@@ -24,10 +22,14 @@ const devPlugins = [
 		path: path.resolve(__dirname, 'build')
 	}),
 	new webpack.DefinePlugin({
-		__DEV__: true,
+		__DEV__: process.env.NODE_ENV === 'production',
 		__ENV__: JSON.stringify(process.env.NODE_ENV || 'development')
 	})
 ];
+/**
+ * Plugins for production environment
+ */
+const devPlugins = [new webpack.HotModuleReplacementPlugin(), new WriteFilePlugin()];
 /**
  * Plugins for production environment
  */
@@ -47,7 +49,7 @@ const prodPlugins = [
 /**
  * Merging plugins on the basis of env
  */
-const pluginList = isProd ? [...devPlugins, ...prodPlugins] : devPlugins;
+const pluginList = isProd ? [...commonPlugins, ...prodPlugins] : [...commonPlugins, ...devPlugins];
 
 module.exports = {
 	name: 'client',
