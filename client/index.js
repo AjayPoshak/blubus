@@ -3,9 +3,10 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
 import { BrowserRouter } from 'react-router-dom';
-import { injectGlobal } from 'styled-components';
+
 import App from './routes';
 import configureStore from './store';
+import GlobalStyle from './GlobalStyle';
 import ErrorBoundary from './views/HomePage/ErrorBoundary';
 // eslint-disable-next-line no-underscore-dangle
 const preloadedState = window.__PRELOADED_STATE__;
@@ -23,26 +24,13 @@ if (__ENV__ === 'PRODUCTION' && typeof Raven !== 'undefined') {
 ReactDOM.render(
 	<Provider store={store}>
 		<BrowserRouter>
-			<ErrorBoundary>
-				<App />
-			</ErrorBoundary>
+			<React.Fragment>
+				<GlobalStyle />
+				<ErrorBoundary>
+					<App />
+				</ErrorBoundary>
+			</React.Fragment>
 		</BrowserRouter>
 	</Provider>,
 	document.getElementById('root')
 );
-
-// eslint-disable-next-line
-injectGlobal`
-	* {
-		margin: 0;
-		padding: 0;
-	}
-
-	body {
-		font-family: 'Roboto', sans-serif;
-	}
-
-	ul {
-		list-style-type: none;
-	}
-`;

@@ -1,5 +1,5 @@
 // eslint-disable-next-line
-import * as type from 'babel-polyfill';
+import * as type from '@babel/polyfill';
 
 import fs from 'fs';
 import Koa from 'koa';
