@@ -5,12 +5,12 @@
 	"main": "index.js",
 	"description": "bus booking in africa",
 	"scripts": {
-		"dev:web": "webpack-dev-server --mode development --config ./webpack.client.js --progress",
+		"dev:web": "webpack-dev-server --mode development --config ./webpack/webpack.client.dev.js --progress",
 		"build": "yarn build:web && yarn build:ssr",
-		"build:web": "yarn run clean && webpack --mode production --config ./webpack.client.js",
-		"build:ssr": "webpack --mode production --config ./webpack.server.js",
+		"build:web": "yarn run clean && webpack --mode production --config ./webpack/webpack.client.prod.js",
+		"build:ssr": "webpack --mode production --config ./webpack/webpack.server.js",
 		"dev:api": "",
-		"dev:ssr": "webpack --mode development --config ./webpack.server.js --watch --progress",
+		"dev:ssr": "webpack --mode development --config ./webpack/webpack.server.js --watch",
 		"start": "yarn dev:web & yarn dev:ssr & nodemon build/server/main.bundle.js",
 		"clean": "rm -rf build",
 		"build:stats": "webpack --env production --json > stats.json",
@@ -65,6 +65,7 @@
 		"webpack": "^4.9.1",
 		"webpack-cli": "^2.1.4",
 		"webpack-node-externals": "^1.7.2",
+		"webpack-merge": "^4.1.4",
 		"write-file-webpack-plugin": "^4.4.1"
 	},
 	"devDependencies": {
