@@ -1,4 +1,8 @@
-export const createScriptTag = script => `<script src=${script}></script>`;
+export const createScriptTag = (scripts) => {
+	const scriptNames = Object.keys(scripts);
+	const scArr = scriptNames.map(script => script && `<script src=${scripts[script].js}></script>`);
+	return scArr.join('');
+};
 
 const renderFullPage = (html, preloadedState, styles, bundles) => `<!DOCTYPE html>
 	<html lang="en">
@@ -40,23 +44,22 @@ const renderFullPage = (html, preloadedState, styles, bundles) => `<!DOCTYPE htm
 	<body>
 		<div id="root">${html}</div>
 	</body>
-	<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
 	<script src=https://cdn.ravenjs.com/3.24.0/raven.min.js
- crossorigin=anonymous></script>
+ crossorigin=anonymous async></script>
 	<script>
 		window.__PRELOADED_STATE__ = ${JSON.stringify(preloadedState).replace(/</g, '\\u003c')}
+		window.shouldAddSW = ${process.env.__DEV__ === true}
 	</script>
-	<script src=${bundles.manifest.js}></script>
-	<script src=${bundles.main.js}></script>
-	<script src=${bundles.vendors.js}></script>
+	${createScriptTag(bundles)}
 	<script>
 		if('serviceWorker' in navigator) {
-			window.addEventListener('load', () => {
+			window.shouldAddSW && window.addEventListener('load', () => {
 				navigator.serviceWorker.register('./service-worker.js')
 			})
 		}
 	</script>
 	<!-- Third Party CSS for calendar module -->
-	<link rel="stylesheet" href="/public/rc-calendar.css">
+	<link rel="stylesheet" href="/public/rc-calendar.css" async>
+	<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet" async>
 	</html>`;
 export default renderFullPage;
