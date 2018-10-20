@@ -40,9 +40,8 @@ const renderFullPage = (html, preloadedState, styles, bundles) => `<!DOCTYPE htm
 	<body>
 		<div id="root">${html}</div>
 	</body>
-	<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
 	<script src=https://cdn.ravenjs.com/3.24.0/raven.min.js
- crossorigin=anonymous></script>
+ crossorigin=anonymous async></script>
 	<script>
 		window.__PRELOADED_STATE__ = ${JSON.stringify(preloadedState).replace(/</g, '\\u003c')}
 		window.shouldAddSW = ${process.env.__DEV__ === true}
@@ -58,6 +57,7 @@ const renderFullPage = (html, preloadedState, styles, bundles) => `<!DOCTYPE htm
 		}
 	</script>
 	<!-- Third Party CSS for calendar module -->
-	<link rel="stylesheet" href="/public/rc-calendar.css">
+	<link rel="stylesheet" href="/public/rc-calendar.css" async>
+	<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet" async>
 	</html>`;
 export default renderFullPage;
