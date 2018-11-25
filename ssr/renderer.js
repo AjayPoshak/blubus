@@ -1,10 +1,12 @@
 export const createScriptTag = (scripts) => {
-	const scriptNames = Object.keys(scripts);
-	const scArr = scriptNames.map(script => script && `<script src=${scripts[script].js}></script>`);
+	const scArr = [];
+	scArr.push(`<script src=${scripts.main.js}></script>`);
+	scArr.push(`<script src=${scripts.manifest.js}></script>`);
+	scripts.vendors && scArr.push(`<script src=${scripts.vendors.js}></script>`);
 	return scArr.join('');
 };
 
-const renderFullPage = (html, preloadedState, styles, bundles) => `<!DOCTYPE html>
+const renderFullPage = (html, preloadedState, styles, bundles, assetBundles) => `<!DOCTYPE html>
 	<html lang="en">
 	
 	<head>
@@ -51,6 +53,7 @@ const renderFullPage = (html, preloadedState, styles, bundles) => `<!DOCTYPE htm
 		window.shouldAddSW = ${process.env.__DEV__ === true}
 	</script>
 	${createScriptTag(bundles)}
+	${assetBundles.map(bundle => `<script src="${bundle.publicPath}"></script>`).join('\n')}
 	<script>
 		if('serviceWorker' in navigator) {
 			window.shouldAddSW && window.addEventListener('load', () => {
