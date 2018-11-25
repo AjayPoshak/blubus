@@ -6,6 +6,7 @@ import Koa from 'koa';
 import Raven from 'raven';
 import serve from 'koa-static';
 import Router from 'koa-router';
+import Loadable from 'react-loadable';
 import bodyparser from 'koa-bodyparser';
 
 import routes from './routes';
@@ -60,5 +61,8 @@ routes(router);
 
 app.use(router.routes()).use(router.allowedMethods());
 
-app.listen(process.env.PORT || 8081);
-console.log(`Server side rendering started on ${process.env.PORT || 8081}`);
+Loadable.preloadAll().then(() => {
+	app.listen(process.env.PORT || 8081, () => {
+		console.log(`Server side rendering started on ${process.env.PORT || 8081}`);
+	});
+});
