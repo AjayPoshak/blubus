@@ -18,12 +18,15 @@
 				"@babel/preset-flow"
 			],
 			"plugins": [
+				"@babel/plugin-syntax-dynamic-import",
+				"react-loadable/babel",
+				"react-hot-loader/babel",
 				[
 					"babel-plugin-styled-components",
 					{
 						"ssr": true
 					}
-				],
+				]
 			]
 		},
 		"production": {
@@ -44,6 +47,7 @@
 				"@babel/preset-flow"
 			],
 			"plugins": [
+				"react-loadable/babel",
 				[
 					"babel-plugin-styled-components",
 					{

@@ -1,16 +1,37 @@
 import React from 'react';
+import { hot } from 'react-hot-loader';
+import Loadable from 'react-loadable';
 import { Route, Switch } from 'react-router-dom';
-
-import Listing from './views/Listing';
-import HomePage from './views/HomePage';
-import SeatLayout from './views/SeatLayout';
-import OrderSummary from './views/OrderSummary';
-import Confirmation from './views/Confirmation';
 
 /*
 	Switch only renders the first match. Subrouting happens downstream
 	https://reacttraining.com/react-router/web/api/Switch
 */
+
+const HomePage = Loadable({
+	loader: () => import('./views/HomePage'),
+	loading: () => <p>Loading...</p>
+});
+
+const Listing = Loadable({
+	loader: () => import('./views/Listing'),
+	loading: () => <p>Loading...</p>
+});
+
+const SeatLayout = Loadable({
+	loader: () => import('./views/SeatLayout'),
+	loading: () => <p>Loading...</p>
+});
+
+const OrderSummary = Loadable({
+	loader: () => import('./views/OrderSummary'),
+	loading: () => <p>Loading...</p>
+});
+
+const Confirmation = Loadable({
+	loader: () => import('./views/Confirmation'),
+	loading: () => <p>Loading...</p>
+});
 
 const App = () => (
 	<Switch>
@@ -22,4 +43,4 @@ const App = () => (
 	</Switch>
 );
 
-export default App;
+export default hot(module)(App);

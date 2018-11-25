@@ -39,8 +39,7 @@ type Props = {
 		}
 	}
 };
-
-export class Listing extends Component<Props> {
+class Listing extends Component<Props> {
 	constructor() {
 		super();
 		(this: any).onCardClick = this.onCardClick.bind(this);
@@ -72,8 +71,8 @@ export class Listing extends Component<Props> {
 					)}
 				</section>
 				<ListViewWrapper>
-					{services &&
-						services.map(item => {
+					{services
+						&& services.map((item) => {
 							const { companyName, busType, dep, arr, travelTime, ticketPrice, currency } = item;
 							return (
 								<ListingCard
