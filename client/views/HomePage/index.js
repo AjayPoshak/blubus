@@ -18,7 +18,7 @@ type Props = {
 	homePage: Object
 };
 
-export class HomePage extends Component<Props> {
+class HomePage extends Component<Props> {
 	constructor() {
 		super();
 		(this: any).handleFrom = this.handleFrom.bind(this);
@@ -68,7 +68,7 @@ export class HomePage extends Component<Props> {
 						<Calendar showToday showTimePicker placeholder="Choose date for journey" />
 						<div style={{ marginTop: '70px' }}>
 							<Button appearance="primary" handleClick={this.handleSearchClick}>
-								Search Buses
+								Search Buses Yes
 							</Button>
 						</div>
 					</PageWrapper>

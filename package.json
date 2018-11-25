@@ -12,6 +12,7 @@
 		"dev:api": "",
 		"dev:ssr": "webpack --mode development --config ./webpack/webpack.server.js --watch",
 		"start": "yarn dev:web & yarn dev:ssr & nodemon build/server/main.bundle.js",
+		"start:prod": "nodemon build/server/main.bundle.js",
 		"clean": "rm -rf build",
 		"build:stats": "webpack --env production --json > stats.json",
 		"test": "jest --config ./jest.config.json",
@@ -24,7 +25,11 @@
 		"flow coverage": "flow coverage"
 	},
 	"lint-staged": {
-		"*.js": ["prettier --write", "eslint --fix", "git add"]
+		"*.js": [
+			"prettier --write",
+			"eslint --fix",
+			"git add"
+		]
 	},
 	"engines": {
 		"node": "9.x"
@@ -32,6 +37,7 @@
 	"author": "Ajay Poshak",
 	"license": "ISC",
 	"dependencies": {
+		"@babel/plugin-syntax-dynamic-import": "^7.0.0",
 		"@babel/polyfill": "^7.0.0",
 		"@babel/preset-env": "^7.0.0",
 		"@babel/preset-react": "^7.0.0",
@@ -55,6 +61,8 @@
 		"rc-calendar": "^9.6.2",
 		"react": "^16.4.0",
 		"react-dom": "^16.4.0",
+		"react-hot-loader": "^4.3.12",
+		"react-loadable": "^5.5.0",
 		"react-redux": "^5.0.7",
 		"react-router": "^4.2.0",
 		"react-router-dom": "^4.2.2",
@@ -64,8 +72,8 @@
 		"uglifyjs-webpack-plugin": "^1.2.5",
 		"webpack": "^4.9.1",
 		"webpack-cli": "^2.1.4",
-		"webpack-node-externals": "^1.7.2",
 		"webpack-merge": "^4.1.4",
+		"webpack-node-externals": "^1.7.2",
 		"write-file-webpack-plugin": "^4.4.1"
 	},
 	"devDependencies": {
