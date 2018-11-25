@@ -18,12 +18,13 @@
 				"@babel/preset-flow"
 			],
 			"plugins": [
+				"react-hot-loader/babel",
 				[
 					"babel-plugin-styled-components",
 					{
 						"ssr": true
 					}
-				],
+				]
 			]
 		},
 		"production": {
