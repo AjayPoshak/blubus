@@ -1,6 +1,6 @@
 import React from 'react';
 import { Route, Switch } from 'react-router-dom';
-
+import { hot } from 'react-hot-loader';
 import Listing from './views/Listing';
 import HomePage from './views/HomePage';
 import SeatLayout from './views/SeatLayout';
@@ -22,4 +22,4 @@ const App = () => (
 	</Switch>
 );
 
-export default App;
+export default hot(module)(App);
