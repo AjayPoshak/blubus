@@ -5,6 +5,7 @@ const path = require('path'),
 	HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
+	mode: process.env.NODE_ENV === 'production' ? 'production' : 'development',
 	name: 'client',
 	target: 'web',
 	// May add cheap-module-source-map to devtool to generate source maps to prod builds
