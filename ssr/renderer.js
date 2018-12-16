@@ -41,6 +41,9 @@ const renderFullPage = (html, preloadedState, styles, bundles, assetBundles) => 
 		<meta name="msapplication-TileColor" content="#ffffff">
 		<meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
 		${styles}
+		<link rel="dns-prefetch" href="https://fonts.googleapis.com">
+		<link rel="dns-prefetch" href="https://res.cloudinary.com">
+		<link rel="dns-prefetch" href="https://cdn.ravenjs.com">
 	</head>
 	
 	<body>
