@@ -5,12 +5,12 @@
 	"main": "index.js",
 	"description": "bus booking in africa",
 	"scripts": {
-		"dev:web": "webpack-dev-server --mode development --config ./webpack/webpack.client.dev.js --progress",
+		"dev:web": "webpack-dev-server  --config ./webpack/webpack.client.dev.js --progress",
 		"build": "yarn build:web && yarn build:ssr",
-		"build:web": "yarn run clean && webpack --mode production --config ./webpack/webpack.client.prod.js",
-		"build:ssr": "webpack --mode production --config ./webpack/webpack.server.js",
+		"build:web": "yarn run clean && webpack --config ./webpack/webpack.client.prod.js",
+		"build:ssr": "webpack --config ./webpack/webpack.server.js",
 		"dev:api": "",
-		"dev:ssr": "webpack --mode development --config ./webpack/webpack.server.js --watch",
+		"dev:ssr": "webpack  --config ./webpack/webpack.server.js --watch",
 		"start": "yarn dev:web & yarn dev:ssr & nodemon build/server/main.bundle.js",
 		"start:prod": "nodemon build/server/main.bundle.js",
 		"clean": "rm -rf build",
@@ -32,7 +32,7 @@
 		]
 	},
 	"engines": {
-		"node": "9.x"
+		"node": "10.x"
 	},
 	"author": "Ajay Poshak",
 	"license": "ISC",
