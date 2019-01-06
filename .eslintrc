@@ -15,7 +15,8 @@
 		"comma-dangle": ["error", "never"],
 		"no-unused-expressions": ["error", { "allowShortCircuit": true, "allowTernary": true }],
 		"function-paren-newline": "off",
-		"no-underscore-dangle": "off"
+		"no-underscore-dangle": "off",
+		"operator-linebreak": [2, "after"]
 	},
 	"globals": {
 		"node": true,
