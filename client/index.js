@@ -8,6 +8,7 @@ import { BrowserRouter } from 'react-router-dom';
 import App from './routes';
 import configureStore from './store';
 import GlobalStyle from './GlobalStyle';
+import OfflineNotifier from './OfflineNotifier';
 import ErrorBoundary from './views/HomePage/ErrorBoundary';
 // eslint-disable-next-line no-underscore-dangle
 const preloadedState = window.__PRELOADED_STATE__;
@@ -29,6 +30,7 @@ Loadable.preloadReady().then(() => {
 				<React.Fragment>
 					<GlobalStyle />
 					<ErrorBoundary>
+						<OfflineNotifier />
 						<App />
 					</ErrorBoundary>
 				</React.Fragment>
