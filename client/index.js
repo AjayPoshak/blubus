@@ -29,8 +29,8 @@ Loadable.preloadReady().then(() => {
 			<BrowserRouter>
 				<React.Fragment>
 					<GlobalStyle />
+					<OfflineNotifier />
 					<ErrorBoundary>
-						<OfflineNotifier />
 						<App />
 					</ErrorBoundary>
 				</React.Fragment>
