@@ -3,7 +3,7 @@ if (!String.prototype.repeat)
 							(String.prototype.repeat = function(count) {
 								if (this == null) throw new TypeError('cant convert '+ this +' to object')
 
-								let str = `${this}`
+								let str = this.toString()
 								// To convert string to integer.
 								count = +count
 								// Check NaN
