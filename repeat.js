@@ -1,7 +1,7 @@
 if (!String.prototype.repeat)
 						{
 							(String.prototype.repeat = function(count) {
-								if (this == null) throw new TypeError(`can't convert ${this} to object`)
+								if (this == null) throw new TypeError('cant convert '+ this +' to object')
 
 								let str = `${this}`
 								// To convert string to integer.
