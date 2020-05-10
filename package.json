@@ -54,7 +54,7 @@
 		"prettier": "^1.12.1",
 		"prop-types": "^15.6.1",
 		"raven": "^2.6.3",
-		"rc-calendar": "^9.6.2",
+		"rc-calendar": "^9.15.10",
 		"react": "^16.7.0",
 		"react-dom": "^16.7.0",
 		"react-hot-loader": "^4.3.12",
