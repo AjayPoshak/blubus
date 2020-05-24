@@ -47,7 +47,7 @@
 		"enzyme-to-json": "^3.3.4",
 		"html-webpack-plugin": "^3.2.0",
 		"jest": "^23.2.0",
-		"koa": "^2.5.1",
+		"koa": "^2.12.0",
 		"koa-bodyparser": "^4.2.1",
 		"koa-router": "^7.4.0",
 		"koa-static": "^5.0.0",
