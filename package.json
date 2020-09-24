@@ -52,7 +52,7 @@
 		"koa-router": "^7.4.0",
 		"koa-static": "^5.0.0",
 		"prettier": "^1.19.1",
-		"prop-types": "^15.6.1",
+		"prop-types": "^15.6.2",
 		"raven": "^2.6.3",
 		"rc-calendar": "^9.15.10",
 		"react": "^16.13.1",
